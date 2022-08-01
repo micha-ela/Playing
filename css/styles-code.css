@@ -8,10 +8,10 @@
   /* initialiseren van eigen styling */
 
   body {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 2.0;
     font-family: "coordinates", sans-serif;
-    color: #FF1493;
+    color: white;
     background-color: white;
     font-weight: normal;
 }
