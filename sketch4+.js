@@ -15,11 +15,6 @@ let nextChange = timer; //syncs the timer and change rate
 let counter=1;
 
 function preload() {
-    img_beeld02 = loadImage('webBeeld/beeld02.png');
-    img_beeld03 = loadImage('webBeeld/beeld03.jpg');
-    img_beeld04 = loadImage('webBeeld/beeld04.jpg');
-    img_beeld05 = loadImage('webBeeld/beeld05.jpg');
-    img_beeld06 = loadImage('webBeeld/beeld06.jpg');
     img_beeld07 = loadImage('webBeeld/beeld07.jpg');
     img_beeld08 = loadImage('webBeeld/beeld08.jpg');
     img_beeld09 = loadImage('webBeeld/beeld09.jpg');
