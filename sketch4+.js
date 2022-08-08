@@ -1,4 +1,5 @@
 let buttons = [];
+let buttonsTrans = [];
 let img;
 let valueX;
 let valueY;
@@ -13,11 +14,49 @@ let timer = 1000;
 let nextChange = timer; //syncs the timer and change rate
 let counter=1;
 
+function preload() {
+    img_beeld02 = loadImage('webBeeld/beeld02.png');
+    img_beeld03 = loadImage('webBeeld/beeld03.jpg');
+    img_beeld04 = loadImage('webBeeld/beeld04.jpg');
+    img_beeld05 = loadImage('webBeeld/beeld05.jpg');
+    img_beeld06 = loadImage('webBeeld/beeld06.jpg');
+    img_beeld07 = loadImage('webBeeld/beeld07.jpg');
+    img_beeld08 = loadImage('webBeeld/beeld08.jpg');
+    img_beeld09 = loadImage('webBeeld/beeld09.jpg');
+    img_beeld10 = loadImage('webBeeld/beeld10.jpg');
+    img_beeld11 = loadImage('webBeeld/beeld11.jpg');
+    img_beeld12 = loadImage('webBeeld/beeld12.jpg');
+    img_beeld13 = loadImage('webBeeld/beeld13.jpg');
+    img_beeld14 = loadImage('webBeeld/beeld14.jpg');
+    img_beeld15 = loadImage('webBeeld/beeld15.jpg');
+    img_beeld16 = loadImage('webBeeld/beeld16.jpg');
+    img_beeld17 = loadImage('webBeeld/beeld17.jpg');
+    img_beeld18 = loadImage('webBeeld/beeld18.jpg');
+    img_beeld19 = loadImage('webBeeld/beeld08.jpg');
+    img_beeld20 = loadImage('webBeeld/beeld09.jpg');
+    img_beeld21 = loadImage('webBeeld/beeld10.jpg');
+    img_beeld22 = loadImage('webBeeld/beeld11.jpg');
+    img_beeld23 = loadImage('webBeeld/beeld12.jpg');
+    img_beeld24 = loadImage('webBeeld/beeld13.jpg');
+    img_beeld25 = loadImage('webBeeld/beeld14.jpg');
+    img_beeld26 = loadImage('webBeeld/beeld15.jpg');
+    img_beeld27 = loadImage('webBeeld/beeld16.jpg');
+    img_beeld28 = loadImage('webBeeld/beeld17.jpg');
+    img_beeld29 = loadImage('webBeeld/beeld18.jpg');
+}
 
 
-function setup () {
-canvas = createCanvas (windowWidth*0.96, windowHeight);
-canvas.position(0,0);
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+  }
+  
+  function draw() {
+    background(200);
+  }
+  
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  
 frameRate(1);
 }
 
@@ -51,22 +90,25 @@ function keyPressed() {
 function Step1 () {
     removeElements();
     noLoop();
+    createButtonsTransStep1 ();
     createQuestStep1() ;
-    createButtonsStep1();
+    createButtonsStep1();   
     buttons[0].mouseOver(overButton0Step1);
     buttons[0].mouseOut(outButton0Step1);
     buttons[1].mouseOver(overButton1Step1);
     buttons[1].mouseOut(outButton1Step1);
     buttons[2].mouseOver(overButton2Step1);
     buttons[2].mouseOut(outButton2Step1);
+    buttonsTrans[0].mouseOver(overButtonTrans0Step1);
+    buttonsTrans[1].mouseOver(overButtonTrans1Step1);
+    buttonsTrans[2].mouseOver(overButtonTrans2Step1);
     // removeQuestStep1() ;
     }
 
 function Step2 () {
     removeElements();
     noLoop();
-    clear();
-
+    createButtonsTransStep2 ();
     createQuestStep2() ;
     createButtonsStep2();
     buttons[0].mouseOver(overButton0Step2);
@@ -75,13 +117,15 @@ function Step2 () {
     buttons[1].mouseOut(outButton1Step2);
     buttons[2].mouseOver(overButton2Step2);
     buttons[2].mouseOut(outButton2Step2);
+    buttonsTrans[0].mouseOver(overButtonTrans0Step2);
+    buttonsTrans[1].mouseOver(overButtonTrans1Step2);
+    buttonsTrans[2].mouseOver(overButtonTrans2Step2);
     }
 
 function Step3 () {
     removeElements();
     noLoop();
-    clear();
-
+    createButtonsTransStep3 ();
     createQuestStep3() ;
     createButtonsStep3();
     buttons[0].mouseOver(overButton0Step3);
@@ -90,13 +134,15 @@ function Step3 () {
     buttons[1].mouseOut(outButton1Step3);
     buttons[2].mouseOver(overButton2Step3);
     buttons[2].mouseOut(outButton2Step3);
+    buttonsTrans[0].mouseOver(overButtonTrans0Step3);
+    buttonsTrans[1].mouseOver(overButtonTrans1Step3);
+    buttonsTrans[2].mouseOver(overButtonTrans2Step3);
     }
 
 function Step4 () {
     removeElements();
     noLoop();
-    clear();
-
+    createButtonsTransStep4 ();
     createQuestStep4() ;
     createButtonsStep4();
     buttons[0].mouseOver(overButton0Step4);
@@ -105,13 +151,15 @@ function Step4 () {
     buttons[1].mouseOut(outButton1Step4);
     buttons[2].mouseOver(overButton2Step4);
     buttons[2].mouseOut(outButton2Step4);
+    buttonsTrans[0].mouseOver(overButtonTrans0Step4);
+    buttonsTrans[1].mouseOver(overButtonTrans1Step4);
+    buttonsTrans[2].mouseOver(overButtonTrans2Step4);
     }
 
 function Step5 () {
     removeElements();
     noLoop();
-    clear();
-
+    createButtonsTransStep5 ();
     createQuestStep5() ;
     createButtonsStep5();
     buttons[0].mouseOver(overButton0Step5);
@@ -120,13 +168,15 @@ function Step5 () {
     buttons[1].mouseOut(outButton1Step5);
     buttons[2].mouseOver(overButton2Step5);
     buttons[2].mouseOut(outButton2Step5);
+    buttonsTrans[0].mouseOver(overButtonTrans0Step5);
+    buttonsTrans[1].mouseOver(overButtonTrans1Step5);
+    buttonsTrans[2].mouseOver(overButtonTrans2Step5);
     }
 
 function Step6 () {
     removeElements();
     noLoop();
-    clear();
-    
+    createButtonsTransStep6 ();
     createQuestStep6() ;
     createButtonsStep6();
     buttons[0].mouseOver(overButton0Step6);
@@ -135,13 +185,15 @@ function Step6 () {
     buttons[1].mouseOut(outButton1Step6);
     buttons[2].mouseOver(overButton2Step6);
     buttons[2].mouseOut(outButton2Step6);
+    buttonsTrans[0].mouseOver(overButtonTrans0Step6);
+    buttonsTrans[1].mouseOver(overButtonTrans1Step6);
+    buttonsTrans[2].mouseOver(overButtonTrans2Step6);
     }
 
 function Step7 () {
     removeElements();
     noLoop();
-    clear();
-        
+    createButtonsTransStep7 ();
     createQuestStep7() ;
     createButtonsStep7();
     buttons[0].mouseOver(overButton0Step7);
@@ -150,13 +202,15 @@ function Step7 () {
     buttons[1].mouseOut(outButton1Step7);
     buttons[2].mouseOver(overButton2Step7);
     buttons[2].mouseOut(outButton2Step7);
+    buttonsTrans[0].mouseOver(overButtonTrans0Step7);
+    buttonsTrans[1].mouseOver(overButtonTrans1Step7);
+    buttonsTrans[2].mouseOver(overButtonTrans2Step7);
     }
     
 function Step8 () {
     removeElements();
     noLoop();
-    clear();
-    
+    createButtonsTransStep8 ();
     createQuestStep8() ;
     createButtonsStep8();
     buttons[0].mouseOver(overButton0Step8);
@@ -165,13 +219,15 @@ function Step8 () {
     buttons[1].mouseOut(outButton1Step8);
     buttons[2].mouseOver(overButton2Step8);
     buttons[2].mouseOut(outButton2Step8);
+    buttonsTrans[0].mouseOver(overButtonTrans0Step8);
+    buttonsTrans[1].mouseOver(overButtonTrans1Step8);
+    buttonsTrans[2].mouseOver(overButtonTrans2Step8);
     }
     
 function Step9 () {
     removeElements();
     noLoop();
-    clear();
-    
+    createButtonsTransStep9 ();   
     createQuestStep9() ;
     createButtonsStep9();
     buttons[0].mouseOver(overButton0Step9);
@@ -180,13 +236,15 @@ function Step9 () {
     buttons[1].mouseOut(outButton1Step9);
     buttons[2].mouseOver(overButton2Step9);
     buttons[2].mouseOut(outButton2Step9);
+    buttonsTrans[0].mouseOver(overButtonTrans0Step9);
+    buttonsTrans[1].mouseOver(overButtonTrans1Step9);
+    buttonsTrans[2].mouseOver(overButtonTrans2Step9);
     }
 
 function Step10 () {
     removeElements();
     noLoop();
-    clear();
-        
+    createButtonsTransStep10 ();
     createQuestStep9() ;
     createButtonsStep9();
     buttons[0].mouseOver(overButton0Step10);
@@ -195,6 +253,9 @@ function Step10 () {
     buttons[1].mouseOut(outButton1Step10);
     buttons[2].mouseOver(overButton2Step10);
     buttons[2].mouseOut(outButton2Step10);
+    buttonsTrans[0].mouseOver(overButtonTrans0Step10);
+    buttonsTrans[1].mouseOver(overButtonTrans1Step10);
+    buttonsTrans[2].mouseOver(overButtonTrans2Step10);
         }
 
 
@@ -223,12 +284,36 @@ function Step10 () {
         button.style("min-width","100px");
         button.style("min-height","100px");
         button.style("border-radius","100px");
-        button.style("color","#dcdcdc");
+        button.style("color","black");
         button.style("font-size","20px");
         button.style("font-family","coordinates");
         button.style("border","none");
     }
     }
+
+    function createButtonsTransStep1 () {
+        buttonsTrans[0] = createButton("");
+        buttonsTrans[1] = createButton("");
+        buttonsTrans[2] = createButton("");
+        buttonsTrans[0].position(width*0,height*0);
+        buttonsTrans[1].position(width*0.33,height*0);
+        buttonsTrans[2].position(width*0.66,height*0);
+        // let bw=concat(",1000,px");
+        for (let button of buttonsTrans) {
+        button.style("background-color","transparent");
+        // button.style("background-color","0");
+        // button.style("background-image","none");
+        button.style("outline","none");
+        button.style("min-width","33.334%");
+        button.style("min-height","100%");
+        // buttons.style("border-radius","100px");
+        // buttons.style("color","#dcdcdc");
+        // buttons.style("font-size","20px");
+        // buttons.style("font-family","coordinates");
+        button.style("border","none");
+    }
+    }
+
 
     function overButton0Step1 () {
         buttons[0].style("background-color","#7FFFD4");
@@ -245,6 +330,9 @@ function Step10 () {
         answer1Step1.remove();
 
 
+    }
+    function overButtonTrans0Step1 () {
+        background(img_beeld13);
     }
 
 
@@ -264,6 +352,11 @@ function Step10 () {
 
 
     }
+    function overButtonTrans1Step1 () {
+        background(img_beeld22);
+    }
+
+
 
 
     function overButton2Step1 () {
@@ -280,6 +373,9 @@ function Step10 () {
         answer1Step1.remove();
 
   }
+  function overButtonTrans2Step1 () {
+    background(img_beeld08);
+}
 
 ////
 
@@ -308,12 +404,36 @@ function createButtonsStep2 () {
     button.style("min-width","100px");
     button.style("min-height","100px");
     button.style("border-radius","100px");
-    button.style("color","#dcdcdc");
+    button.style("color","black");
     button.style("font-size","20px");
     button.style("font-family","coordinates");
     button.style("border","none");
 }
 }
+
+function createButtonsTransStep2 () {
+    buttonsTrans[0] = createButton("");
+    buttonsTrans[1] = createButton("");
+    buttonsTrans[2] = createButton("");
+    buttonsTrans[0].position(width*0,height*0);
+    buttonsTrans[1].position(width*0.33,height*0);
+    buttonsTrans[2].position(width*0.66,height*0);
+    // let bw=concat(",1000,px");
+    for (let button of buttonsTrans) {
+    button.style("background-color","transparent");
+    // button.style("background-color","0");
+    // button.style("background-image","none");
+    button.style("outline","none");
+    button.style("min-width","33.334%");
+    button.style("min-height","100%");
+    // buttons.style("border-radius","100px");
+    // buttons.style("color","#dcdcdc");
+    // buttons.style("font-size","20px");
+    // buttons.style("font-family","coordinates");
+    button.style("border","none");
+}
+}
+
 
 function overButton0Step2 () {
     buttons[0].style("background-color","#7FFFD4");
@@ -330,6 +450,9 @@ function outButton0Step2 () {
     answer1Step2.remove();
 
 
+}
+function overButtonTrans0Step2 () {
+    background(img_beeld15);
 }
 
 
@@ -349,6 +472,9 @@ function outButton1Step2 () {
 
 
 }
+function overButtonTrans1Step2 () {
+    background(img_beeld07);
+}
 
 
 function overButton2Step2 () {
@@ -366,6 +492,9 @@ function outButton2Step2 () {
     answer1Step2.remove();
 
 
+}
+function overButtonTrans2Step2 () {
+    background(img_beeld08);
 }
 ////
 
@@ -394,9 +523,32 @@ function createButtonsStep3 () {
     button.style("min-width","100px");
     button.style("min-height","100px");
     button.style("border-radius","100px");
-    button.style("color","#dcdcdc");
+    button.style("color","black");
     button.style("font-size","20px");
     button.style("font-family","coordinates");
+    button.style("border","none");
+}
+}
+
+function createButtonsTransStep3 () {
+    buttonsTrans[0] = createButton("");
+    buttonsTrans[1] = createButton("");
+    buttonsTrans[2] = createButton("");
+    buttonsTrans[0].position(width*0,height*0);
+    buttonsTrans[1].position(width*0.33,height*0);
+    buttonsTrans[2].position(width*0.66,height*0);
+    // let bw=concat(",1000,px");
+    for (let button of buttonsTrans) {
+    button.style("background-color","transparent");
+    // button.style("background-color","0");
+    // button.style("background-image","none");
+    button.style("outline","none");
+    button.style("min-width","33.334%");
+    button.style("min-height","100%");
+    // buttons.style("border-radius","100px");
+    // buttons.style("color","#dcdcdc");
+    // buttons.style("font-size","20px");
+    // buttons.style("font-family","coordinates");
     button.style("border","none");
 }
 }
@@ -417,6 +569,9 @@ function outButton0Step3 () {
 
 
 }
+function overButtonTrans0Step3 () {
+    background(img_beeld09);
+}
 
 
 function overButton1Step3 () {
@@ -433,6 +588,9 @@ function outButton1Step3 () {
     buttons[1].style("background-color","#ff8000");
     answer1Step3.remove();
 
+}
+function overButtonTrans1Step3 () {
+    background(img_beeld10);
 }
 
 
@@ -451,6 +609,9 @@ function outButton2Step3 () {
     answer1Step3.remove();
 
 
+}
+function overButtonTrans2Step3 () {
+    background(img_beeld11);
 }
 ////
 
@@ -486,6 +647,29 @@ function createButtonsStep4 () {
 }
 }
 
+function createButtonsTransStep4 () {
+    buttonsTrans[0] = createButton("");
+    buttonsTrans[1] = createButton("");
+    buttonsTrans[2] = createButton("");
+    buttonsTrans[0].position(width*0,height*0);
+    buttonsTrans[1].position(width*0.33,height*0);
+    buttonsTrans[2].position(width*0.66,height*0);
+    // let bw=concat(",1000,px");
+    for (let button of buttonsTrans) {
+    button.style("background-color","transparent");
+    // button.style("background-color","0");
+    // button.style("background-image","none");
+    button.style("outline","none");
+    button.style("min-width","33.334%");
+    button.style("min-height","100%");
+    // buttons.style("border-radius","100px");
+    // buttons.style("color","#dcdcdc");
+    // buttons.style("font-size","20px");
+    // buttons.style("font-family","coordinates");
+    button.style("border","none");
+}
+}
+
 function overButton0Step4 () {
     buttons[0].style("background-color","#7FFFD4");
     answer1Step4=createP("Excellent choice.<br/ > Transparency is good for the soul.");
@@ -501,6 +685,9 @@ function outButton0Step4 () {
     answer1Step4.remove();
 
 
+}
+function overButtonTrans0Step4 () {
+    background(img_beeld12);
 }
 
 
@@ -521,6 +708,9 @@ function outButton1Step4 () {
 
 
 }
+function overButtonTrans1Step4 () {
+    background(img_beeld13);
+}
 
 
 function overButton2Step4 () {
@@ -538,6 +728,9 @@ function outButton2Step4 () {
     answer1Step4.remove();
 
 
+}
+function overButtonTrans2Step4 () {
+    background(img_beeld14);
 }
 
 ////
@@ -567,9 +760,32 @@ function createButtonsStep5 () {
     button.style("min-width","100px");
     button.style("min-height","100px");
     button.style("border-radius","100px");
-    button.style("color","#dcdcdc");
+    button.style("color","black");
     button.style("font-size","20px");
     button.style("font-family","coordinates");
+    button.style("border","none");
+}
+}
+
+function createButtonsTransStep5 () {
+    buttonsTrans[0] = createButton("");
+    buttonsTrans[1] = createButton("");
+    buttonsTrans[2] = createButton("");
+    buttonsTrans[0].position(width*0,height*0);
+    buttonsTrans[1].position(width*0.33,height*0);
+    buttonsTrans[2].position(width*0.66,height*0);
+    // let bw=concat(",1000,px");
+    for (let button of buttonsTrans) {
+    button.style("background-color","transparent");
+    // button.style("background-color","0");
+    // button.style("background-image","none");
+    button.style("outline","none");
+    button.style("min-width","33.334%");
+    button.style("min-height","100%");
+    // buttons.style("border-radius","100px");
+    // buttons.style("color","#dcdcdc");
+    // buttons.style("font-size","20px");
+    // buttons.style("font-family","coordinates");
     button.style("border","none");
 }
 }
@@ -590,6 +806,9 @@ function outButton0Step5 () {
 
 
 }
+function overButtonTrans0Step5 () {
+    background(img_beeld15);
+}
 
 
 function overButton1Step5 () {
@@ -608,6 +827,9 @@ function outButton1Step5 () {
 
 
 }
+function overButtonTrans1Step5 () {
+    background(img_beeld16);
+}
 
 
 function overButton2Step5 () {
@@ -625,6 +847,9 @@ function outButton2Step5 () {
     answer1Step5.remove();
 
 
+}
+function overButtonTrans2Step5 () {
+    background(img_beeld17);
 }
 
 ////
@@ -653,9 +878,32 @@ function createButtonsStep6 () {
     button.style("min-width","100px");
     button.style("min-height","100px");
     button.style("border-radius","100px");
-    button.style("color","#dcdcdc");
+    button.style("color","black");
     button.style("font-size","20px");
     button.style("font-family","coordinates");
+    button.style("border","none");
+}
+}
+
+function createButtonsTransStep6 () {
+    buttonsTrans[0] = createButton("");
+    buttonsTrans[1] = createButton("");
+    buttonsTrans[2] = createButton("");
+    buttonsTrans[0].position(width*0,height*0);
+    buttonsTrans[1].position(width*0.33,height*0);
+    buttonsTrans[2].position(width*0.66,height*0);
+    // let bw=concat(",1000,px");
+    for (let button of buttonsTrans) {
+    button.style("background-color","transparent");
+    // button.style("background-color","0");
+    // button.style("background-image","none");
+    button.style("outline","none");
+    button.style("min-width","33.334%");
+    button.style("min-height","100%");
+    // buttons.style("border-radius","100px");
+    // buttons.style("color","#dcdcdc");
+    // buttons.style("font-size","20px");
+    // buttons.style("font-family","coordinates");
     button.style("border","none");
 }
 }
@@ -676,6 +924,9 @@ function outButton0Step6 () {
 
 
 }
+function overButtonTrans0Step6 () {
+    background(img_beeld18);
+}
 
 
 function overButton1Step6 () {
@@ -694,6 +945,10 @@ function outButton1Step6 () {
 
 
 }
+function overButtonTrans1Step6 () {
+    background(img_beeld19);
+}
+
 
 
 function overButton2Step6 () {
@@ -712,6 +967,10 @@ function outButton2Step6 () {
 
 
 }
+function overButtonTrans2Step6 () {
+    background(img_beeld20);
+}
+
 ////
 
 function createQuestStep7() {
@@ -739,9 +998,32 @@ function createButtonsStep7 () {
     button.style("min-width","100px");
     button.style("min-height","100px");
     button.style("border-radius","100px");
-    button.style("color","#dcdcdc");
+    button.style("color","black");
     button.style("font-size","20px");
     button.style("font-family","coordinates");
+    button.style("border","none");
+}
+}
+
+function createButtonsTransStep7 () {
+    buttonsTrans[0] = createButton("");
+    buttonsTrans[1] = createButton("");
+    buttonsTrans[2] = createButton("");
+    buttonsTrans[0].position(width*0,height*0);
+    buttonsTrans[1].position(width*0.33,height*0);
+    buttonsTrans[2].position(width*0.66,height*0);
+    // let bw=concat(",1000,px");
+    for (let button of buttonsTrans) {
+    button.style("background-color","transparent");
+    // button.style("background-color","0");
+    // button.style("background-image","none");
+    button.style("outline","none");
+    button.style("min-width","33.334%");
+    button.style("min-height","100%");
+    // buttons.style("border-radius","100px");
+    // buttons.style("color","#dcdcdc");
+    // buttons.style("font-size","20px");
+    // buttons.style("font-family","coordinates");
     button.style("border","none");
 }
 }
@@ -762,6 +1044,9 @@ function outButton0Step7 () {
 
 
 }
+function overButtonTrans0Step7 () {
+    background(img_beeld21);
+}
 
 
 function overButton1Step7 () {
@@ -780,6 +1065,9 @@ function outButton1Step7 () {
 
 
 }
+function overButtonTrans1Step7 () {
+    background(img_beeld22);
+}
 
 
 function overButton2Step7 () {
@@ -797,6 +1085,9 @@ function outButton2Step7 () {
     answer1Step7.remove();
 
 
+}
+function overButtonTrans2Step7 () {
+    background(img_beeld23);
 }
 ////
 
@@ -825,9 +1116,32 @@ function createButtonsStep8 () {
     button.style("min-width","100px");
     button.style("min-height","100px");
     button.style("border-radius","100px");
-    button.style("color","#dcdcdc");
+    button.style("color","black");
     button.style("font-size","20px");
     button.style("font-family","coordinates");
+    button.style("border","none");
+}
+}
+
+function createButtonsTransStep8 () {
+    buttonsTrans[0] = createButton("");
+    buttonsTrans[1] = createButton("");
+    buttonsTrans[2] = createButton("");
+    buttonsTrans[0].position(width*0,height*0);
+    buttonsTrans[1].position(width*0.33,height*0);
+    buttonsTrans[2].position(width*0.66,height*0);
+    // let bw=concat(",1000,px");
+    for (let button of buttonsTrans) {
+    button.style("background-color","transparent");
+    // button.style("background-color","0");
+    // button.style("background-image","none");
+    button.style("outline","none");
+    button.style("min-width","33.334%");
+    button.style("min-height","100%");
+    // buttons.style("border-radius","100px");
+    // buttons.style("color","#dcdcdc");
+    // buttons.style("font-size","20px");
+    // buttons.style("font-family","coordinates");
     button.style("border","none");
 }
 }
@@ -848,6 +1162,9 @@ function outButton0Step8 () {
 
 
 }
+function overButtonTrans0Step8 () {
+    background(img_beeld24);
+}
 
 
 function overButton1Step8 () {
@@ -866,6 +1183,9 @@ function outButton1Step8 () {
 
 
 }
+function overButtonTrans1Step8 () {
+    background(img_beeld25);
+}
 
 
 function overButton2Step8 () {
@@ -883,6 +1203,9 @@ function outButton2Step8 () {
     answer1Step8.remove();
 
 
+}
+function overButtonTrans2Step8 () {
+    background(img_beeld26);
 }
 
 ////
@@ -912,9 +1235,32 @@ function createButtonsStep9 () {
     button.style("min-width","100px");
     button.style("min-height","100px");
     button.style("border-radius","100px");
-    button.style("color","#dcdcdc");
+    button.style("color","black");
     button.style("font-size","20px");
     button.style("font-family","coordinates");
+    button.style("border","none");
+}
+}
+
+function createButtonsTransStep9 () {
+    buttonsTrans[0] = createButton("");
+    buttonsTrans[1] = createButton("");
+    buttonsTrans[2] = createButton("");
+    buttonsTrans[0].position(width*0,height*0);
+    buttonsTrans[1].position(width*0.33,height*0);
+    buttonsTrans[2].position(width*0.66,height*0);
+    // let bw=concat(",1000,px");
+    for (let button of buttonsTrans) {
+    button.style("background-color","transparent");
+    // button.style("background-color","0");
+    // button.style("background-image","none");
+    button.style("outline","none");
+    button.style("min-width","33.334%");
+    button.style("min-height","100%");
+    // buttons.style("border-radius","100px");
+    // buttons.style("color","#dcdcdc");
+    // buttons.style("font-size","20px");
+    // buttons.style("font-family","coordinates");
     button.style("border","none");
 }
 }
@@ -935,6 +1281,9 @@ function outButton0Step9 () {
 
 
 }
+function overButtonTrans0Step9 () {
+    background(img_beeld27);
+}
 
 
 function overButton1Step9 () {
@@ -953,6 +1302,9 @@ function outButton1Step9 () {
 
 
 }
+function overButtonTrans1Step9 () {
+    background(img_beeld28);
+}
 
 
 function overButton2Step9 () {
@@ -970,6 +1322,9 @@ function outButton2Step9 () {
     answer1Step9.remove();
 
 
+}
+function overButtonTrans2Step9 () {
+    background(img_beeld29);
 }
 ////
 
@@ -998,9 +1353,32 @@ function createButtonsStep10 () {
     button.style("min-width","100px");
     button.style("min-height","100px");
     button.style("border-radius","100px");
-    button.style("color","#dcdcdc");
+    button.style("color","black");
     button.style("font-size","20px");
     button.style("font-family","coordinates");
+    button.style("border","none");
+}
+}
+
+function createButtonsTransStep10 () {
+    buttonsTrans[0] = createButton("");
+    buttonsTrans[1] = createButton("");
+    buttonsTrans[2] = createButton("");
+    buttonsTrans[0].position(width*0,height*0);
+    buttonsTrans[1].position(width*0.33,height*0);
+    buttonsTrans[2].position(width*0.66,height*0);
+    // let bw=concat(",1000,px");
+    for (let button of buttonsTrans) {
+    button.style("background-color","transparent");
+    // button.style("background-color","0");
+    // button.style("background-image","none");
+    button.style("outline","none");
+    button.style("min-width","33.334%");
+    button.style("min-height","100%");
+    // buttons.style("border-radius","100px");
+    // buttons.style("color","#dcdcdc");
+    // buttons.style("font-size","20px");
+    // buttons.style("font-family","coordinates");
     button.style("border","none");
 }
 }
@@ -1021,6 +1399,9 @@ function outButton0Step10 () {
 
 
 }
+function overButtonTrans0Step10 () {
+    background(img_beeld12);
+}
 
 
 function overButton1Step10 () {
@@ -1039,6 +1420,9 @@ function outButton1Step10 () {
 
 
 }
+function overButtonTrans1Step10 () {
+    background(img_beeld08);
+}
 
 
 function overButton2Step10 () {
@@ -1056,4 +1440,7 @@ function outButton2Step10 () {
     answer1Step10.remove();
 
 
+}
+function overButtonTrans2Step10 () {
+    background(img_beeld22);
 }
