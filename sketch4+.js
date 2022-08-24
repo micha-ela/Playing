@@ -264,7 +264,7 @@ function Step11() {
 function createQuestStep1() {
     // quest1.hide();
     quest1Step1 = createP("ATLAS OF ID");
-    quest1Step1.style("bottom", "1px");
+    quest1Step1.style("top", "600px");
     quest1Step1.style("right", "600px");
     quest1Step1.style("position", "absolute");
     quest1Step1.style("font-size", "108px");
