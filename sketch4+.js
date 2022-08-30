@@ -1,5 +1,6 @@
 let buttons = [];
 let buttonsTrans = [];
+let answers = [];
 let img;
 let valueX;
 let valueY;
@@ -35,8 +36,11 @@ function preload() {
     img_beeld23 = loadImage('webBeeld/beeld23.jpg');
     img_beeld31 = loadImage('webBeeld/beeld31.jpg');
     img_beeld32 = loadImage('webBeeld/beeld32.jpg');
-
-
+    sound_atlas01 = loadSound('webSound/ATLAS01.mp3');
+    sound_atlas02 = loadSound('webSound/ATLAS02.mp3');
+    sound_atlas03 = loadSound('webSound/ATLAS03.mp3');
+    sound_atlas04 = loadSound('webSound/ATLAS04.mp3');
+    sound_atlas05 = loadSound('webSound/ATLAS05.mp3');
 }
 
 
@@ -47,25 +51,29 @@ function setup() {
 
 frameRate(1);
 
-function draw() {
-
-    setTimeout(Step1, 1);
-    // setTimeout(removeElements(),5000);
-    setTimeout(Step2, 10000);
-    setTimeout(Step3, 25000);
-    setTimeout(Step4, 40000);
-    setTimeout(Step5, 55000);
-    setTimeout(Step6, 70000);
-    setTimeout(Step7, 85000);
-    setTimeout(Step8, 100000);
-    setTimeout(Step9, 115000);
-    setTimeout(Step10, 130000);
-    setTimeout(Step11, 145000);
-
-    /*}
-    function windowResized() {
-        resizeCanvas(windowWidth, windowHeight);*/
+function draw(){
+    Step1();
 }
+
+// function draw() {
+
+//     setTimeout(Step1, 1);
+//     // setTimeout(removeElements(),5000);
+//     setTimeout(Step2, 10000);
+//     setTimeout(Step3, 25000);
+//     setTimeout(Step4, 40000);
+//     setTimeout(Step5, 55000);
+//     setTimeout(Step6, 70000);
+//     setTimeout(Step7, 85000);
+//     setTimeout(Step8, 100000);
+//     setTimeout(Step9, 115000);
+//     setTimeout(Step10, 130000);
+//     setTimeout(Step11, 145000);
+
+//     /*}
+//     function windowResized() {
+//         resizeCanvas(windowWidth, windowHeight);*/
+// }
 
 
 function keyPressed() {
@@ -85,7 +93,8 @@ function Step1() {
     createQuestStep1();
     createButtonsStep1();
     buttons[0].mouseOver(overButton0Step1);
-    buttons[0].mouseOut(outButton0Step1);
+    // buttons[0].mouseOut(outButton0Step1);
+    buttons[0].mouseClicked(clickButton0Step1);
 
     // removeQuestStep1() ;
 }
@@ -106,6 +115,9 @@ function Step2() {
     buttonsTrans[0].mouseOver(overButtonTrans0Step2);
     buttonsTrans[1].mouseOver(overButtonTrans1Step2);
     buttonsTrans[2].mouseOver(overButtonTrans2Step2);
+    buttons[0].mouseClicked(clickButton0Step2);
+    buttons[1].mouseClicked(clickButton1Step2);
+    buttons[2].mouseClicked(clickButton2Step2);
 }
 
 function Step3() {
@@ -123,6 +135,9 @@ function Step3() {
     buttonsTrans[0].mouseOver(overButtonTrans0Step3);
     buttonsTrans[1].mouseOver(overButtonTrans1Step3);
     buttonsTrans[2].mouseOver(overButtonTrans2Step3);
+    buttons[0].mouseClicked(clickButton0Step3);
+    buttons[1].mouseClicked(clickButton1Step3);
+    buttons[2].mouseClicked(clickButton2Step3);
 }
 
 function Step4() {
@@ -140,6 +155,9 @@ function Step4() {
     buttonsTrans[0].mouseOver(overButtonTrans0Step4);
     buttonsTrans[1].mouseOver(overButtonTrans1Step4);
     buttonsTrans[2].mouseOver(overButtonTrans2Step4);
+    buttons[0].mouseClicked(clickButton0Step4);
+    buttons[1].mouseClicked(clickButton1Step4);
+    buttons[2].mouseClicked(clickButton2Step4);
 }
 
 function Step5() {
@@ -157,6 +175,9 @@ function Step5() {
     buttonsTrans[0].mouseOver(overButtonTrans0Step5);
     buttonsTrans[1].mouseOver(overButtonTrans1Step5);
     buttonsTrans[2].mouseOver(overButtonTrans2Step5);
+    buttons[0].mouseClicked(clickButton0Step5);
+    buttons[1].mouseClicked(clickButton1Step5);
+    buttons[2].mouseClicked(clickButton2Step5);
 }
 
 function Step6() {
@@ -174,6 +195,9 @@ function Step6() {
     buttonsTrans[0].mouseOver(overButtonTrans0Step6);
     buttonsTrans[1].mouseOver(overButtonTrans1Step6);
     buttonsTrans[2].mouseOver(overButtonTrans2Step6);
+    buttons[0].mouseClicked(clickButton0Step6);
+    buttons[1].mouseClicked(clickButton1Step6);
+    buttons[2].mouseClicked(clickButton2Step6);
 }
 
 function Step7() {
@@ -191,6 +215,9 @@ function Step7() {
     buttonsTrans[0].mouseOver(overButtonTrans0Step7);
     buttonsTrans[1].mouseOver(overButtonTrans1Step7);
     buttonsTrans[2].mouseOver(overButtonTrans2Step7);
+    buttons[0].mouseClicked(clickButton0Step7);
+    buttons[1].mouseClicked(clickButton1Step7);
+    buttons[2].mouseClicked(clickButton2Step7);
 }
 
 function Step8() {
@@ -208,6 +235,9 @@ function Step8() {
     buttonsTrans[0].mouseOver(overButtonTrans0Step8);
     buttonsTrans[1].mouseOver(overButtonTrans1Step8);
     buttonsTrans[2].mouseOver(overButtonTrans2Step8);
+    buttons[0].mouseClicked(clickButton0Step8);
+    buttons[1].mouseClicked(clickButton1Step8);
+    buttons[2].mouseClicked(clickButton2Step8);
 }
 
 function Step9() {
@@ -225,6 +255,9 @@ function Step9() {
     buttonsTrans[0].mouseOver(overButtonTrans0Step9);
     buttonsTrans[1].mouseOver(overButtonTrans1Step9);
     buttonsTrans[2].mouseOver(overButtonTrans2Step9);
+    buttons[0].mouseClicked(clickButton0Step9);
+    buttons[1].mouseClicked(clickButton1Step9);
+    buttons[2].mouseClicked(clickButton2Step9);
 }
 
 function Step10() {
@@ -242,6 +275,9 @@ function Step10() {
     buttonsTrans[0].mouseOver(overButtonTrans0Step10);
     buttonsTrans[1].mouseOver(overButtonTrans1Step10);
     buttonsTrans[2].mouseOver(overButtonTrans2Step10);
+    buttons[0].mouseClicked(clickButton0Step10);
+    buttons[1].mouseClicked(clickButton1Step10);
+    buttons[2].mouseClicked(clickButton2Step10);
 }
 
 function Step11() {
@@ -259,6 +295,9 @@ function Step11() {
     buttonsTrans[0].mouseOver(overButtonTrans0Step11);
     buttonsTrans[1].mouseOver(overButtonTrans1Step11);
     buttonsTrans[2].mouseOver(overButtonTrans2Step11);
+    buttons[0].mouseClicked(clickButton0Step11);
+    buttons[1].mouseClicked(clickButton1Step11);
+    buttons[2].mouseClicked(clickButton2Step11);
 }
 
 function createQuestStep1() {
@@ -301,6 +340,13 @@ function overButton0Step1() {
 
 }
 
+// / micha toegevoegd voor next step on click 
+
+function clickButton0Step1 () {
+    Step2();
+}
+
+/////
 
 
 function createQuestStep2() {
@@ -375,7 +421,9 @@ function outButton0Step2() {
 
 }
 function overButtonTrans0Step2() {
+    sound_atlas01.play();
     background(img_beeld13);
+
 }
 
 
@@ -396,6 +444,7 @@ function outButton1Step2() {
 
 }
 function overButtonTrans1Step2() {
+    sound_atlas02.play();
     background(img_beeld22);
 }
 
@@ -417,8 +466,27 @@ function outButton2Step2() {
 
 }
 function overButtonTrans2Step2() {
+    sound_atlas03.play();
     background(img_beeld08);
 }
+
+// / micha toegevoegd voor next step on click en om antwoord op te slaan
+
+function clickButton0Step2 () {
+    answers[0]=0;
+    Step3();
+}
+
+function clickButton1Step2 () {
+    answers[0]=1;
+    Step3();
+}
+
+function clickButton2Step2 () {
+    answers[0]=2;
+    Step3();
+}
+
 
 
 ////
@@ -538,6 +606,24 @@ function outButton2Step3() {
 function overButtonTrans2Step3() {
     background(img_beeld11);
 }
+
+// / micha toegevoegd voor next step on click en om antwoord op te slaan
+
+function clickButton0Step3 () {
+    answers[1]=0;
+    Step4();
+}
+
+function clickButton1Step3 () {
+    answers[1]=1;
+    Step4();
+}
+
+function clickButton2Step3 () {
+    answers[1]=2;
+    Step4();
+}
+
 ////
 
 function createQuestStep4() {
@@ -656,6 +742,23 @@ function outButton2Step4() {
 }
 function overButtonTrans2Step4() {
     background(img_beeld14);
+}
+
+// / micha toegevoegd voor next step on click en om antwoord op te slaan
+
+function clickButton0Step4 () {
+    answers[2]=0;
+    Step5();
+}
+
+function clickButton1Step4 () {
+    answers[2]=1;
+    Step5();
+}
+
+function clickButton2Step4 () {
+    answers[2]=2;
+    Step5();
 }
 
 ////
@@ -777,6 +880,24 @@ function overButtonTrans2Step5() {
     background(img_beeld17);
 }
 
+
+// / micha toegevoegd voor next step on click en om antwoord op te slaan
+
+function clickButton0Step5 () {
+    answers[3]=0;
+    Step6();
+}
+
+function clickButton1Step5 () {
+    answers[3]=1;
+    Step6();
+}
+
+function clickButton2Step5 () {
+    answers[3]=2;
+    Step6();
+}
+
 ////
 function createQuestStep6() {
     // quest1.hide();
@@ -894,6 +1015,23 @@ function outButton2Step6() {
 }
 function overButtonTrans2Step6() {
     background(img_beeld20);
+}
+
+// / micha toegevoegd voor next step on click en om antwoord op te slaan
+
+function clickButton0Step6 () {
+    answers[4]=0;
+    Step7();
+}
+
+function clickButton1Step6 () {
+    answers[4]=1;
+    Step7();
+}
+
+function clickButton2Step6 () {
+    answers[4]=2;
+    Step7();
 }
 
 ////
@@ -1014,6 +1152,28 @@ function outButton2Step7() {
 function overButtonTrans2Step7() {
     background(img_beeld23);
 }
+
+
+
+
+
+// / micha toegevoegd voor next step on click en om antwoord op te slaan
+
+function clickButton0Step7 () {
+    answers[5]=0;
+    Step8();
+}
+
+function clickButton1Step7 () {
+    answers[5]=1;
+    Step8();
+}
+
+function clickButton2Step7 () {
+    answers[5]=2;
+    Step8();
+}
+
 ////
 
 function createQuestStep8() {
@@ -1133,6 +1293,25 @@ function overButtonTrans2Step8() {
     background(img_beeld21);
 }
 
+
+// / micha toegevoegd voor next step on click en om antwoord op te slaan
+
+function clickButton0Step8 () {
+    answers[6]=0;
+    Step9();
+}
+
+function clickButton1Step8 () {
+    answers[6]=1;
+    Step9();
+}
+
+function clickButton2Step8 () {
+    answers[6]=2;
+    Step9();
+}
+
+
 ////
 
 function createQuestStep9() {
@@ -1251,6 +1430,24 @@ function outButton2Step9() {
 function overButtonTrans2Step9() {
     background(img_beeld06);
 }
+
+// / micha toegevoegd voor next step on click en om antwoord op te slaan
+
+function clickButton0Step9 () {
+    answers[7]=0;
+    Step10();
+}
+
+function clickButton1Step9 () {
+    answers[7]=1;
+    Step10();
+}
+
+function clickButton2Step9 () {
+    answers[7]=2;
+    Step10();
+}
+
 ////
 
 function createQuestStep10() {
@@ -1368,6 +1565,23 @@ function outButton2Step10() {
 }
 function overButtonTrans2Step10() {
     background(img_beeld32);
+}
+
+// / micha toegevoegd voor next step on click en om antwoord op te slaan
+
+function clickButton0Step10 () {
+    answers[8]=0;
+    Step11();
+}
+
+function clickButton1Step10 () {
+    answers[8]=1;
+    Step11();
+}
+
+function clickButton2Step10 () {
+    answers[8]=2;
+    Step11();
 }
 ////
 
@@ -1488,3 +1702,20 @@ function outButton2Step11() {
 function overButtonTrans2Step11() {
     background(img_beeld08);
 }
+
+// // / micha toegevoegd voor next step on click en om antwoord op te slaan
+
+// function clickButton0Step11 () {
+//     answers[9]=0;
+//     Step2();
+// }
+
+// function clickButton1Step11 () {
+//     answers[9]=1;
+//     Step2();
+// }
+
+// function clickButton2Step11 () {
+//     answers[9]=2;
+//     Step2();
+// }
