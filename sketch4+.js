@@ -422,7 +422,7 @@ function outButton0Step2() {
 
 }
 function overButtonTrans0Step2() {
-    sound_atlas02.play();
+    sound_atlas05.play();
     background(img_beeld13);
 
 }
@@ -446,7 +446,7 @@ function outButton1Step2() {
 
 }
 function overButtonTrans1Step2() {
-    sound_atlas02.play();
+    sound_atlas05.play();
     background(img_beeld22);
 }
 
@@ -469,26 +469,26 @@ function outButton2Step2() {
 
 }
 function overButtonTrans2Step2() {
-    sound_atlas02.play();
+    sound_atlas05.play();
     background(img_beeld08);
 }
 
 // / micha toegevoegd voor next step on click en om antwoord op te slaan
 
 function clickButton0Step2 () {
-    sound_atlas05.play();
+    sound_atlas01.play();
     answers[0]=0;
     Step3();
 }
 
 function clickButton1Step2 () {
-    sound_atlas05.play();
+    sound_atlas01.play();
     answers[0]=1;
     Step3();
 }
 
 function clickButton2Step2 () {
-    sound_atlas05.play();
+    sound_atlas01.play();
     answers[0]=2;
     Step3();
 }
