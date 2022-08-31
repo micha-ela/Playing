@@ -433,7 +433,7 @@ function overButton1Step2() {
     buttons[1].style("background-color", "#7FFFD4");
     answer1Step2 = createP("I don't think so either</br>You seem hardly fit.");
     answer1Step2.style("position", "absolute");
-    answer1Step2.style("top", "500px");
+    answer1Step2.style("top", "450px");
     answer1Step2.style("right", "60px");
     quest3Step2.remove();
 }
