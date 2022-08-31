@@ -826,7 +826,7 @@ function createButtonsTransStep5() {
 
 function overButton0Step5() {
     buttons[0].style("background-color", "#7FFFD4");
-    answer1Step5 = createP("Excellent choice.</br>Ideology is good for the soul.");
+    answer1Step5 = createP("Excellent choice.</br>Consumer thrust is good for business.");
     answer1Step5.style("position", "absolute");
     answer1Step5.style("top", "220px");
     answer1Step5.style("left", "50px");
