@@ -458,7 +458,7 @@ function overButton2Step2() {
     buttons[2].style("background-color", "#7FFFD4");
     answer1Step2 = createP("Really?</br>Well, think about it.");
     answer1Step2.style("position", "absolute");
-    answer1Step2.style("top", "420px");
+    answer1Step2.style("top", "400px");
     answer1Step2.style("right", "50px");
     quest3Step2.remove();
 }
