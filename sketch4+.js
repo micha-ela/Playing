@@ -331,6 +331,7 @@ function createButtonsStep1() {
 
 
 function overButton0Step1() {
+    sound_atlas03.play();
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step1 = createP("");
     answer1Step1.style("position", "absolute");
@@ -553,6 +554,7 @@ function createButtonsTransStep3() {
 }
 
 function overButton0Step3() {
+    sound_atlas03.play();
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step3 = createP("Excellent choice.</br>Participation is good for the soul.");
     answer1Step3.style("position", "absolute");
@@ -574,6 +576,7 @@ function overButtonTrans0Step3() {
 
 
 function overButton1Step3() {
+    sound_atlas03.play();
     buttons[1].style("background-color", "#7FFFD4");
     answer1Step3 = createP("Nah.");
     answer1Step3.style("position", "absolute");
@@ -594,6 +597,7 @@ function overButtonTrans1Step3() {
 
 
 function overButton2Step3() {
+    sound_atlas03.play();
     buttons[2].style("background-color", "#7FFFD4");
     answer1Step3 = createP("Really?</br>Are you sure you don't want to?");
     answer1Step3.style("position", "absolute");
@@ -688,6 +692,7 @@ function createButtonsTransStep4() {
 }
 
 function overButton0Step4() {
+    sound_atlas03.play();
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step4 = createP("Excellent choice.</br>Transparency is good for the soul.");
     answer1Step4.style("position", "absolute");
@@ -709,6 +714,7 @@ function overButtonTrans0Step4() {
 
 
 function overButton1Step4() {
+    sound_atlas03.play();
     buttons[1].style("background-color", "#7FFFD4");
     answer1Step4 = createP("So, you think you are special, huh?");
     answer1Step4.style("position", "absolute");
@@ -731,6 +737,7 @@ function overButtonTrans1Step4() {
 
 
 function overButton2Step4() {
+    sound_atlas03.play();
     buttons[2].style("background-color", "#7FFFD4");
     answer1Step4 = createP("Really?</br>Are you sure you're not?");
     answer1Step4.style("position", "absolute");
@@ -825,6 +832,7 @@ function createButtonsTransStep5() {
 }
 
 function overButton0Step5() {
+    sound_atlas03.play();
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step5 = createP("Excellent choice.</br>Consumer thrust is good for business.");
     answer1Step5.style("position", "absolute");
@@ -846,6 +854,7 @@ function overButtonTrans0Step5() {
 
 
 function overButton1Step5() {
+    sound_atlas03.play();
     buttons[1].style("background-color", "#7FFFD4");
     answer1Step5 = createP("We do.");
     answer1Step5.style("position", "absolute");
@@ -867,6 +876,7 @@ function overButtonTrans1Step5() {
 
 
 function overButton2Step5() {
+    sound_atlas03.play();
     buttons[2].style("background-color", "#7FFFD4");
     answer1Step5 = createP("Really! We do!");
     answer1Step5.style("position", "absolute");
@@ -961,6 +971,7 @@ function createButtonsTransStep6() {
 }
 
 function overButton0Step6() {
+    sound_atlas03.play();
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step6 = createP("Excellent choice.</br>Characteristics are good for the soul.");
     answer1Step6.style("position", "absolute");
@@ -982,6 +993,7 @@ function overButtonTrans0Step6() {
 
 
 function overButton1Step6() {
+    sound_atlas03.play();
     buttons[1].style("background-color", "#7FFFD4");
     answer1Step6 = createP("Why not?");
     answer1Step6.style("position", "absolute");
@@ -1004,6 +1016,7 @@ function overButtonTrans1Step6() {
 
 
 function overButton2Step6() {
+    sound_atlas03.play();
     buttons[2].style("background-color", "#7FFFD4");
     answer1Step6 = createP("We proceed anyway.");
     answer1Step6.style("position", "absolute");
@@ -1098,6 +1111,7 @@ function createButtonsTransStep7() {
 }
 
 function overButton0Step7() {
+    sound_atlas03.play();
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step7 = createP("Excellent choice.</br>Self-fulfilling is good for the soul.");
     answer1Step7.style("position", "absolute");
@@ -1119,6 +1133,7 @@ function overButtonTrans0Step7() {
 
 
 function overButton1Step7() {
+    sound_atlas03.play();
     buttons[1].style("background-color", "#7FFFD4");
     answer1Step7 = createP("Are you one of those healthy people?");
     answer1Step7.style("position", "absolute");
@@ -1140,6 +1155,7 @@ function overButtonTrans1Step7() {
 
 
 function overButton2Step7() {
+    sound_atlas03.play();
     buttons[2].style("background-color", "#7FFFD4");
     answer1Step7 = createP("Are you sure you are not,</br>because you seem to be?");
     answer1Step7.style("position", "absolute");
@@ -1238,6 +1254,7 @@ function createButtonsTransStep8() {
 }
 
 function overButton0Step8() {
+    sound_atlas03.play();
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step8 = createP("Excellent choice.</br>Being backward is good for the soul.");
     answer1Step8.style("position", "absolute");
@@ -1259,6 +1276,7 @@ function overButtonTrans0Step8() {
 
 
 function overButton1Step8() {
+    sound_atlas03.play();
     buttons[1].style("background-color", "#7FFFD4");
     answer1Step8 = createP("Not?");
     answer1Step8.style("position", "absolute");
@@ -1280,6 +1298,7 @@ function overButtonTrans1Step8() {
 
 
 function overButton2Step8() {
+    sound_atlas03.play();
     buttons[2].style("background-color", "#7FFFD4");
     answer1Step8 = createP("It might be the case.");
     answer1Step8.style("position", "absolute");
@@ -1376,6 +1395,7 @@ function createButtonsTransStep9() {
 }
 
 function overButton0Step9() {
+    sound_atlas03.play();
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step9 = createP("Excellent choice.<br/ >  Correlation is good for the soul.");
     answer1Step9.style("position", "absolute");
@@ -1397,6 +1417,7 @@ function overButtonTrans0Step9() {
 
 
 function overButton1Step9() {
+    sound_atlas03.play();
     buttons[1].style("background-color", "#7FFFD4");
     answer1Step9 = createP("Well shame on you!");
     answer1Step9.style("position", "absolute");
@@ -1418,6 +1439,7 @@ function overButtonTrans1Step9() {
 
 
 function overButton2Step9() {
+    sound_atlas03.play();
     buttons[2].style("background-color", "#7FFFD4");
     answer1Step9 = createP("Reconsider your decision.");
     answer1Step9.style("position", "absolute");
@@ -1512,6 +1534,7 @@ function createButtonsTransStep10() {
 }
 
 function overButton0Step10() {
+    sound_atlas03.play();
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step10 = createP("Excellent choice.<br/ >Submission is good for the soul.");
     answer1Step10.style("position", "absolute");
@@ -1533,6 +1556,7 @@ function overButtonTrans0Step10() {
 
 
 function overButton1Step10() {
+    sound_atlas03.play();
     buttons[1].style("background-color", "#7FFFD4");
     answer1Step10 = createP("Hope you can manage.");
     answer1Step10.style("position", "absolute");
@@ -1554,6 +1578,7 @@ function overButtonTrans1Step10() {
 
 
 function overButton2Step10() {
+    sound_atlas03.play();
     buttons[2].style("background-color", "#7FFFD4");
     answer1Step10 = createP("Make up your mind.");
     answer1Step10.style("position", "absolute");
@@ -1648,6 +1673,7 @@ function createButtonsTransStep11() {
 
 
 function overButton0Step11() {
+    sound_atlas03.play();
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step11 = createP("Excellent choice.<br/ > Exposure is good for the soul.");
     answer1Step11.style("position", "absolute");
@@ -1669,6 +1695,7 @@ function overButtonTrans0Step11() {
 
 
 function overButton1Step11() {
+    sound_atlas03.play();
     buttons[1].style("background-color", "#7FFFD4");
     answer1Step11 = createP("You reveal more then you think.");
     answer1Step11.style("position", "absolute");
@@ -1690,6 +1717,7 @@ function overButtonTrans1Step11() {
 
 
 function overButton2Step11() {
+    sound_atlas03.play();
     buttons[2].style("background-color", "#7FFFD4");
     answer1Step11 = createP("Really?<br/ > Are you sure you don't know?");
     answer1Step11.style("position", "absolute");
