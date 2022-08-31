@@ -405,6 +405,7 @@ function createButtonsTransStep2() {
 
 
 function overButton0Step2() {
+    sound_atlas03.play();
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step2 = createP("Excellent choice.</br>Modeling is good for the soul.");
     answer1Step2.style("position", "absolute");
@@ -421,13 +422,14 @@ function outButton0Step2() {
 
 }
 function overButtonTrans0Step2() {
-    sound_atlas01.play();
+    sound_atlas02.play();
     background(img_beeld13);
 
 }
 
 
 function overButton1Step2() {
+    sound_atlas03.play();
     buttons[1].style("background-color", "#7FFFD4");
     answer1Step2 = createP("I don't think so either</br>You seem hardly fit.");
     answer1Step2.style("position", "absolute");
@@ -452,6 +454,7 @@ function overButtonTrans1Step2() {
 
 
 function overButton2Step2() {
+    sound_atlas03.play();
     buttons[2].style("background-color", "#7FFFD4");
     answer1Step2 = createP("Really?</br>Well, think about it.");
     answer1Step2.style("position", "absolute");
@@ -466,23 +469,26 @@ function outButton2Step2() {
 
 }
 function overButtonTrans2Step2() {
-    sound_atlas03.play();
+    sound_atlas02.play();
     background(img_beeld08);
 }
 
 // / micha toegevoegd voor next step on click en om antwoord op te slaan
 
 function clickButton0Step2 () {
+    sound_atlas05.play();
     answers[0]=0;
     Step3();
 }
 
 function clickButton1Step2 () {
+    sound_atlas05.play();
     answers[0]=1;
     Step3();
 }
 
 function clickButton2Step2 () {
+    sound_atlas05.play();
     answers[0]=2;
     Step3();
 }
