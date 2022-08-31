@@ -410,7 +410,7 @@ function overButton0Step2() {
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step2 = createP("Excellent choice.</br>Modeling is good for the soul.");
     answer1Step2.style("position", "absolute");
-    answer1Step2.style("top", "60px");
+    answer1Step2.style("top", "40px");
     answer1Step2.style("right", "90px");
     quest3Step2.remove();
 }
@@ -580,8 +580,8 @@ function overButton1Step3() {
     buttons[1].style("background-color", "#7FFFD4");
     answer1Step3 = createP("Nah.");
     answer1Step3.style("position", "absolute");
-    answer1Step3.style("top", "720px");
-    answer1Step3.style("left", "580px");
+    answer1Step3.style("top", "520px");
+    answer1Step3.style("right", "480px");
     quest3Step3.remove();
 }
 
@@ -602,7 +602,7 @@ function overButton2Step3() {
     answer1Step3 = createP("Really?</br>Are you sure you don't want to?");
     answer1Step3.style("position", "absolute");
     answer1Step3.style("top", "220px");
-    answer1Step3.style("left", "130px");
+    answer1Step3.style("left", "160px");
     quest3Step3.remove();
 }
 
@@ -640,7 +640,7 @@ function createQuestStep4() {
     // quest1.hide();
     quest1Step4 = createP("Forecasting is about the future,</br>not the present,</br>and the future is something</br>that has yet to become real.</br>How readable are You?");
     quest1Step4.style("top", "250px");
-    quest1Step4.style("left", "600px");
+    quest1Step4.style("left", "510px");
     quest1Step4.style("position", "absolute");
     quest1Step4.style("font-size", "32px");
     quest1Step4.style("font-family", "coordinates");
@@ -696,7 +696,7 @@ function overButton0Step4() {
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step4 = createP("Excellent choice.</br>Transparency is good for the soul.");
     answer1Step4.style("position", "absolute");
-    answer1Step4.style("top", "550px");
+    answer1Step4.style("top", "450px");
     answer1Step4.style("right", "50px");
     quest3Step4.remove();
 }
@@ -741,7 +741,7 @@ function overButton2Step4() {
     buttons[2].style("background-color", "#7FFFD4");
     answer1Step4 = createP("Really?</br>Are you sure you're not?");
     answer1Step4.style("position", "absolute");
-    answer1Step4.style("top", "720px");
+    answer1Step4.style("top", "620px");
     answer1Step4.style("right", "350px");
     quest3Step4.remove();
 }
@@ -975,8 +975,8 @@ function overButton0Step6() {
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step6 = createP("Excellent choice.</br>Characteristics are good for the soul.");
     answer1Step6.style("position", "absolute");
-    answer1Step6.style("top", "480px");
-    answer1Step6.style("left", "200px");
+    answer1Step6.style("top", "120px");
+    answer1Step6.style("left", "250px");
     quest3Step6.remove();
 }
 
@@ -998,7 +998,7 @@ function overButton1Step6() {
     answer1Step6 = createP("Why not?");
     answer1Step6.style("position", "absolute");
     answer1Step6.style("top", "720px");
-    answer1Step6.style("left", "250px");
+    answer1Step6.style("left", "350px");
     quest3Step6.remove();
 }
 
@@ -1021,7 +1021,7 @@ function overButton2Step6() {
     answer1Step6 = createP("We proceed anyway.");
     answer1Step6.style("position", "absolute");
     answer1Step6.style("top", "120px");
-    answer1Step6.style("left", "250px");
+    answer1Step6.style("right", "250px");
     quest3Step6.remove();
 }
 
