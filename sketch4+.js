@@ -409,7 +409,7 @@ function overButton0Step2() {
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step2 = createP("Excellent choice.</br>Modeling is good for the soul.");
     answer1Step2.style("position", "absolute");
-    answer1Step2.style("top", "80px");
+    answer1Step2.style("top", "60px");
     answer1Step2.style("right", "90px");
     quest3Step2.remove();
 }
