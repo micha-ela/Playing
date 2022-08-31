@@ -422,7 +422,7 @@ function outButton0Step2() {
 
 }
 function overButtonTrans0Step2() {
-    sound_atlas05.play();
+    
     background(img_beeld13);
 
 }
@@ -446,7 +446,7 @@ function outButton1Step2() {
 
 }
 function overButtonTrans1Step2() {
-    sound_atlas05.play();
+    
     background(img_beeld22);
 }
 
@@ -469,7 +469,7 @@ function outButton2Step2() {
 
 }
 function overButtonTrans2Step2() {
-    sound_atlas05.play();
+    
     background(img_beeld08);
 }
 
