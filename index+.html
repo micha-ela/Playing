@@ -50,11 +50,15 @@
 		height: 100vh;
 		position: relative;
 		overflow: inherit;
+		z-index: 100;
 	}
 	#webAR_cont canvas { 
 		background-color: transparent; 
 		opacity: 0.4; 
 		overflow: inherit;
+		
+		position: absolute; top: 0; left: 0;
+		z-index: 100;
 	}
 	#webAR_cont video { 
 		display: none;
@@ -67,7 +71,13 @@
   <body>
   
   <!-- BEGIN : webAR container to place the mesh face mask -->
-    <div id="webAR_cont"></div>
+	<div id="webAR_cont">
+	<!-- Normale manier van opbouw -->
+	<!--
+		<canvas class="canvas" id="canvas1"></canvas>
+		<canvas class="canvas" id="canvas2"></canvas>
+	-->
+	</div>
       <!-- END : webAR container to place the mesh face mask -->
 
   </body>
