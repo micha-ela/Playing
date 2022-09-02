@@ -2001,7 +2001,7 @@ function createButtonsStep12() {
 
 
 function overButton0Step12() {
-    sound_atlas03.play();
+    //sound_atlas03.play();
     buttons[0].style("background-color", "#7FFFD4");
     answer1Step12 = createP("Excellent choice.<br/ > Blandness is good for bonding.");
     answer1Step12.style("position", "absolute");
@@ -2023,7 +2023,7 @@ function overButtonTrans0Step12() {
 
 
 function overButton1Step12() {
-    sound_atlas03.play();
+    //sound_atlas03.play();
     buttons[1].style("background-color", "#7FFFD4");
     answer1Step12 = createP("What do you mean?<br/ > You don't like bonding?");
     answer1Step12.style("position", "absolute");
@@ -2045,7 +2045,7 @@ function overButtonTrans1Step12() {
 
 
 function overButton2Step12() {
-
+    //sound_atlas03.play();
     buttons[2].style("background-color", "#7FFFD4");
     answer1Step12 = createP("Almost.<br/ > Confusion is a first step.");
     answer1Step12.style("position", "absolute");
