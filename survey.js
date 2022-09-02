@@ -461,6 +461,12 @@ function createQuestStep1() {
     quest1Step1.style("font-size", "108px");
     quest1Step1.style("font-family", "coordinates");
     quest1Step1.style("font-weight", "bold");
+    quest1Step1.style("top", "700px");
+    quest1Step1.style("right", "600px");
+    quest1Step1.style("position", "absolute");
+    quest1Step1.style("font-size", "108px");
+    quest1Step1.style("font-family", "coordinates");
+    quest1Step1.style("font-weight", "bold");
 }
 
 function createButtonsStep1() {
