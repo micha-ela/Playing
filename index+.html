@@ -43,19 +43,23 @@
     </script>
       <!-- END : webAR scripts to place the mesh face mask -->
 
-	    <!-- BEGIN : webAR style to place the mesh face mask -->
-	  <style>
-      #webAR_cont {
-	width: 100vw;
-	height: 100vh;
-	position: relative;
-	overflow: hidden;
-      }
-	video { 
+	<!-- BEGIN : webAR style to place the mesh face mask -->
+	<style>
+	#webAR_cont {
+		width: 100vw;
+		height: 100vh;
+		position: relative;
+		overflow: hidden;
+	}
+	#webAR_cont canvas { 
+		background-color: transparent; 
+	}
+	#webAR_cont video { 
 		display: none;
-	    }
-    </style>
-	        <!-- END : webAR style to place the mesh face mask -->
+	}
+	</style>
+	<!-- END : webAR style to place the mesh face mask -->
+	  
   </head>
 
   <body>
