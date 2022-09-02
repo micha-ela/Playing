@@ -15,7 +15,7 @@
     <script src="libraries/p5.func.min.js"></script>
     <script src="sketch4+.js"></script>
     
-  <!-- webAR scripts to place the mesh face mask -->
+  <!-- BEGIN : webAR scripts to place the mesh face mask -->
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.5/dist/mindar-face-three.prod.js"></script>
     <script type="module">
       const THREE = window.MINDAR.FACE.THREE;
@@ -26,9 +26,11 @@
       const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
       scene.add(light);
       const faceMesh = mindarThree.addFaceMesh();
-      const texture = new THREE.TextureLoader().load('./assets/canonical_face_model_uv_visualization.png');
+      const texture = new THREE.TextureLoader().load('./webAR/img/canonical_face_model_uv_WHITE_02.png');
       faceMesh.material.map = texture;
       faceMesh.material.transparent = true;
+	    faceMesh.material.opacity = 0.4;
+	    //// faceMesh.material.opacity = 1 + Math.sin(new Date().getTime() * .0025); // or any other value you like
       faceMesh.material.needsUpdate = true;
       scene.add(faceMesh);
       const start = async() => {
@@ -39,14 +41,16 @@
       }
       start();
     </script>
-    
+      <!-- END : webAR scripts to place the mesh face mask -->
+
   </head>
 
   <body>
   
-  <!-- webAR container to place the mesh face mask -->
+  <!-- BEGIN : webAR container to place the mesh face mask -->
     <div id="webAR_cont"></div>
-    
+      <!-- END : webAR container to place the mesh face mask -->
+
   </body>
 
 </html>
