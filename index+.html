@@ -15,33 +15,6 @@
     <script src="libraries/p5.func.min.js"></script>
     <script src="sketch4+.js"></script>
     
-  <!-- BEGIN : webAR scripts to place the mesh face mask -->
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.5/dist/mindar-face-three.prod.js"></script>
-    <script type="module">
-      const THREE = window.MINDAR.FACE.THREE;
-      const mindarThree = new window.MINDAR.FACE.MindARThree({
-	container: document.querySelector("#webAR_cont"),
-      });
-      const {renderer, scene, camera} = mindarThree;
-      const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
-      scene.add(light);
-      const faceMesh = mindarThree.addFaceMesh();
-      const texture = new THREE.TextureLoader().load('./webAR/img/canonical_face_model_uv_WHITE_02.png');
-      faceMesh.material.map = texture;
-      faceMesh.material.transparent = true;
-	    faceMesh.material.opacity = 1.0;
-	    //// faceMesh.material.opacity = 1 + Math.sin(new Date().getTime() * .0025); // or any other value you like
-      faceMesh.material.needsUpdate = true;
-      scene.add(faceMesh);
-      const start = async() => {
-	await mindarThree.start();
-	renderer.setAnimationLoop(() => {
-	  renderer.render(scene, camera);
-	});
-      }
-      start();
-    </script>
-      <!-- END : webAR scripts to place the mesh face mask -->
 
 	<style>
 	main { 
@@ -105,4 +78,32 @@
 
   </body>
 
+	<!-- BEGIN : webAR scripts to place the mesh face mask -->
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.5/dist/mindar-face-three.prod.js"></script>
+    <script type="module">
+      const THREE = window.MINDAR.FACE.THREE;
+      const mindarThree = new window.MINDAR.FACE.MindARThree({
+	container: document.querySelector("#webAR_cont"),
+      });
+      const {renderer, scene, camera} = mindarThree;
+      const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
+      scene.add(light);
+      const faceMesh = mindarThree.addFaceMesh();
+      const texture = new THREE.TextureLoader().load('./webAR/img/canonical_face_model_uv_WHITE_02.png');
+      faceMesh.material.map = texture;
+      faceMesh.material.transparent = true;
+	    faceMesh.material.opacity = 1.0;
+	    //// faceMesh.material.opacity = 1 + Math.sin(new Date().getTime() * .0025); // or any other value you like
+      faceMesh.material.needsUpdate = true;
+      scene.add(faceMesh);
+      const start = async() => {
+	await mindarThree.start();
+	renderer.setAnimationLoop(() => {
+	  renderer.render(scene, camera);
+	});
+      }
+      start();
+    </script>
+      <!-- END : webAR scripts to place the mesh face mask -->
+	
 </html>
