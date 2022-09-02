@@ -29,7 +29,7 @@
       const texture = new THREE.TextureLoader().load('./webAR/img/canonical_face_model_uv_WHITE_02.png');
       faceMesh.material.map = texture;
       faceMesh.material.transparent = true;
-	    faceMesh.material.opacity = 0.48;
+	    faceMesh.material.opacity = 1.0;
 	    //// faceMesh.material.opacity = 1 + Math.sin(new Date().getTime() * .0025); // or any other value you like
       faceMesh.material.needsUpdate = true;
       scene.add(faceMesh);
@@ -49,7 +49,7 @@
 		width: 100vw;
 		height: 100vh;
 		position: relative;
-		overflow: visible;
+		overflow: inherit;
 	}
 	#webAR_cont canvas { 
 		background-color: transparent; 
