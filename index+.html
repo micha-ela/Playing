@@ -20,7 +20,7 @@
     <script type="module">
       const THREE = window.MINDAR.FACE.THREE;
       const mindarThree = new window.MINDAR.FACE.MindARThree({
-	container: document.querySelector("#container"),
+	container: document.querySelector("#webAR_cont"),
       });
       const {renderer, scene, camera} = mindarThree;
       const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
@@ -43,6 +43,19 @@
     </script>
       <!-- END : webAR scripts to place the mesh face mask -->
 
+	    <!-- BEGIN : webAR style to place the mesh face mask -->
+	  <style>
+      #webAR_cont {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+      }
+	video { 
+		display: none;
+	    }
+    </style>
+	        <!-- END : webAR style to place the mesh face mask -->
   </head>
 
   <body>
