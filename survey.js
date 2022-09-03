@@ -512,7 +512,7 @@ function clickButton0Step1 () {
 
 function createQuestStep2() {
     // quest2.hide();
-    quest1Step2 = createP("Do you want to become</br>the future model European?");
+    quest1Step2 = createP("Do you want to become</br>the Future Model European?");
     quest1Step2.style("top", "250px");
     quest1Step2.style("left", "700px");
     quest1Step2.style("position", "absolute");
