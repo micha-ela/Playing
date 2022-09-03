@@ -2664,7 +2664,7 @@ function createReport () {
         story[1]=createP("You do not want to contribute to the future.");
     }
     else if (answers[1]==2){
-        story[1]=createP("You are not sure you want to contribute to the future.</br>Do your research now!");
+        story[1]=createP("You are not sure you want to contribute to the future.");
     }
     if (answers[2]==0){
         story[2]=createP("You expect that your face is an open book.");
