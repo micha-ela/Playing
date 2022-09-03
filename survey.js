@@ -16,6 +16,10 @@ let sec = 0;
 let timer = 1000;
 let nextChange = timer; //syncs the timer and change rate
 let counter = 1;
+let story=[];
+let counter1 = 0;
+let counter2 = 0;
+let counter3 = 0;
 
 // for dataviz
 let movers = [];
@@ -98,6 +102,9 @@ function draw(){
     else if (dataviz==1){
     Step12();
     }
+    else if (dataviz==2){
+        Step13();
+        }
 }
 
 // function draw() {
@@ -450,6 +457,18 @@ function Step12 () {
         noLoop();
     }
 }
+
+function Step13(){
+    removeElements();
+    noLoop();
+    clear();
+    createReport();
+    createButtonsStep13();
+    buttons[0].mouseClicked(clickButton0Step13);
+
+}
+
+//// vanaf hier functies die gebruikt worden in de steps
 
 
 function createQuestStep1() {
@@ -1944,6 +1963,9 @@ function clickButton0Step11 () {
      Step12();
  }
 
+/////
+
+
  function createQuestStep12() {
     // quest1.hide();
     quest1Step12 = createP("How colourful are you?");
@@ -2070,21 +2092,65 @@ function overButtonTrans2Step12() {
 
 function clickButton0Step12 () {
     answers[10]=0;
-    dataviz=0;
+    dataviz=2;
     Step13();
 }
 
 function clickButton1Step12 () {
     answers[10]=1;
-    dataviz=0;
+    dataviz=2;
     Step13();
 }
 
 function clickButton2Step12 () {
     answers[10]=2;
-    dataviz=0;
+    dataviz=2;
     Step13();
 }
+
+////
+
+/////
+
+function createButtonsStep13() {
+    buttons[0] = createButton("START </br> AGAIN");
+    // buttons[1] = createButton("Very");
+    // buttons[2] = createButton("Uh?");
+    buttons[0].position(width * 0.85, height * 0.15);
+    // buttons[1].position(width * 0.8, height * 0.75);
+    // buttons[2].position(width * 0.9, height * 0.35);
+    // let bw=concat(",1000,px");
+    for (let button of buttons) {
+        button.style("background-color", "#ff8000");
+        button.style("min-width", "100px");
+        button.style("min-height", "100px");
+        button.style("border-radius", "100px");
+        button.style("color", "black");
+        button.style("font-size", "20px");
+        button.style("font-family", "coordinates");
+        button.style("border", "none");
+    }
+}   
+
+
+// // / micha toegevoegd voor next step on click en om antwoord op te slaan
+
+function clickButton0Step13() {
+    dataviz=0;
+    Step1();
+}
+
+// function clickButton1Step13() {
+//     answers[10]=1;
+//     dataviz=2;
+//     Step13();
+// }
+
+// function clickButton2Step13() {
+//     answers[10]=2;
+//     dataviz=2;
+//     Step13();
+// }
 
 ////
 
@@ -2529,3 +2595,183 @@ function step () {
             break;
     }
     }
+
+
+    
+
+
+    ///////////////////////////////////
+/// rapport 
+
+
+function createReport () {
+    /// We tellen per gebruiker de Yes, No en Maybe
+    for (var i = 0; i < 11; i++){
+        if (answers[i]==0){
+            counter1++;
+            print(counter1);            
+        }
+        if (answers[i]==1){
+            counter2++;
+        }
+        if (answers[i]==2){
+            counter3++;
+        }
+    }
+    /// Your future ID
+    if (counter1>6)
+    {
+        pred1=createP("FUTURE ID 01 Future Model European");
+        pred2=createP("Congratulations. You are accepted as a Future Model European!");
+    }
+    else if (counter2>6)
+    {
+        pred1=createP("FUTURE ID 02 Obsolete");
+        pred2=createP("We regret to inform you that you are not accepted as a Future Model European.</br>You will soon become obsolete.");
+    }
+    else 
+    {
+        pred1=createP("FUTURE ID 03 Pending");
+        pred2=createP("We inform you that you are not yet a Future Model European.</br>We invite you to try again next month.");
+    }
+    pred1.style("top", "100px");
+    pred1.style("center","600px");
+    pred1.style("position", "absolute");
+    pred1.style("font-size", "58px");
+    pred1.style("font-family", "coordinates");
+    pred1.style("font-weight", "bold");
+    pred2.style("top", "200px");
+    pred2.style("center");
+    pred2.style("position", "absolute");
+    pred2.style("font-size", "38px");
+    pred2.style("font-family", "coordinates");
+    pred2.style("font-weight", "bold");
+    /// De rest van het rapport = de antwoorden die de gebruiker gaf 
+    if (answers[0]==0){
+        story[0]=createP("You want to become the future model European.");
+    }
+    else if (answers[0]==1){
+        story[0]=createP("You don’t want to become the future model European.And you seem hardly fit either.");
+    }
+    else if (answers[0]==2){
+        story[0]=createP("You’re not sure that you want to become the future model European.");
+    }
+    if (answers[1]==0){
+        story[1]=createP("Your face is like a secret code and it shows.");
+    }
+    else if (answers[1]==1){
+        story[1]=createP("You believe your face doesn’t show at all.");
+    }
+    else if (answers[1]==2){
+        story[1]=createP("You seem to have little awareness of how much your face is revealing.");
+    }
+    if (answers[2]==0){
+        story[2]=createP("You want to participate in the future.");
+    }
+    else if (answers[2]==1){
+        story[2]=createP("You don’t want to participate in the future.");
+    }
+    else if (answers[2]==2){
+        story[2]=createP("You’re not sure you want to participate in the future.");
+    }
+    if (answers[3]==0){
+        story[3]=createP("You expect that your face can be read like a page from a book.");
+    }
+    else if (answers[3]==1){
+        story[3]=createP("You don’t expect that your face can be read like a page from a book.");
+    }
+    else if (answers[3]==2){
+        story[3]=createP("You’re unsure whether your face can be read like a page from a book. Check it out.");
+    }
+    if (answers[4]==0){
+        story[4]=createP("You believe that making forecasts about people is like making forecasts about the weather.");
+    }
+    else if (answers[4]==1){
+        story[4]=createP("You don’t believe that making forecasts about people is like making forecasts about the weather.");
+    }
+    else if (answers[4]==2){
+        story[4]=createP("You’re unsure that making forecasts about people is like making forecasts about the weather. Check the available documentation more thoroughly.");
+    }
+    if (answers[5]==0){
+        story[5]=createP("You want to continue on this path.");
+    }
+    else if (answers[5]==1){
+        story[5]=createP("You don’t want to continue on this path.");
+    }
+    else if (answers[5]==2){
+        story[5]=createP("You’re not sure you want to continue like this. Think about it.");
+    }
+    if (answers[6]==0){
+        story[6]=createP("You treat people like things and trap them and yourself in self-fulfilling prophecies.");
+    }
+    else if (answers[6]==1){
+        story[6]=createP("You don’t believe in the power of self-fulfilling prophecies.");
+    }
+    else if (answers[6]==2){
+        story[6]=createP("You don’t know what self-fulfilling prophecies are. You should invest some time in the topic.");
+    }
+    if (answers[7]==0){
+        story[7]=createP("Being backward is good for the soul.");
+    }
+    else if (answers[7]==1){
+        story[7]=createP("Not?");
+    }
+    else if (answers[7]==2){
+        story[7]=createP("It might be the case.");
+    }
+    if (answers[8]==0){
+        story[8]=createP("Correlation is good for the soul.");
+    }
+    else if (answers[8]==1){
+        story[8]=createP("Well, shame on you!");
+    }
+    else if (answers[8]==2){
+        story[8]=createP("Reconsider your decision.");
+    }
+    if (answers[9]==0){
+        story[9]=createP("Submission is good for the soul.");
+    }
+    else if (answers[9]==1){
+        story[9]=createP("Hope you can manage.");
+    }
+    else if (answers[9]==2){
+        story[9]=createP("Make up your mind.");
+    }
+    if (answers[10]==0){
+        story[10]=createP("Expansion is good for the soul.");
+    }
+    else if (answers[10]==1){
+        story[10]=createP("Ok, fair enough");
+    }
+    else if (answers[10]==2){
+        story[10]=createP("Really? Are you sure you're not?");
+    }
+    story[0].style("top", "350px");
+    story[0].style("left", "100px");
+    story[1].style("top", "375px");
+    story[1].style("right", "200px");
+    story[2].style("top", "400px");
+    story[2].style("right", "200px");
+    story[3].style("top", "425px");
+    story[3].style("right", "200px");
+    story[4].style("top", "450px");
+    story[4].style("right", "200px");
+    story[5].style("top", "475px");
+    story[5].style("right", "200px");
+    story[6].style("top", "500px");
+    story[6].style("right", "200px");
+    story[7].style("top", "525px");
+    story[7].style("right", "200px");
+    story[8].style("top", "550px");
+    story[8].style("right", "200px");
+    story[9].style("top", "575px");
+    story[9].style("right", "200px");
+    story[10].style("top", "600px");
+    story[10].style("right", "200px");
+    for (let s of story){
+    s.style("position", "absolute");
+    s.style("font-size", "20px");
+    s.style("font-family", "coordinates");
+    s.style("font-weight", "bold");
+    }
+}
