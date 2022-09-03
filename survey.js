@@ -2721,13 +2721,13 @@ function createReport () {
         story[7]=createP("You will soon realize how correlated you are.");
     }
     if (answers[8]==0){
-        story[8]=createP("As a Future Model European you see yourself in a master role.");
+        story[8]=createP("As a Future Model European you see yourself in a Slave role. We will see to that.");
     }
     else if (answers[8]==1){
-        story[8]=createP("As Future Model European you see yourself in a slave role. We will see to that.");
+        story[8]=createP("As Future Model European you see yourself in a Master role.");
     }
     else if (answers[8]==2){
-        story[8]=createP("You need to figure out weather you want to be the master or the slave. We let people decide for themselves.");
+        story[8]=createP("You need to figure out weather you want to be the Master or the Slave. We let people decide for themselves.");
     }
     if (answers[9]==0){
         story[9]=createP("Your face holds no secret to us.");
