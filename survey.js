@@ -2607,7 +2607,7 @@ function step () {
 
 function createReport () {
     /// We tellen per gebruiker de Yes, No en Maybe
-    for (var i = 0; i < 11; i++){
+    for (var i = 0; i < 10; i++){
         if (answers[i]==0){
             counter1++;
             print(counter1);            
