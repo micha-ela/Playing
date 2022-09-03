@@ -2621,18 +2621,18 @@ function createReport () {
     /// Your future ID
     if (counter1>6)
     {
-        pred1=createP("FUTURE ID 01 Future Model European");
+        pred1=createP("FUTURE ID Future Model European");
         pred2=createP("Congratulations. You are accepted as a Future Model European!");
     }
     else if (counter2>6)
     {
-        pred1=createP("FUTURE ID 02 Obsolete");
+        pred1=createP("FUTURE ID Obsolete");
         pred2=createP("We regret to inform you that you are not accepted as a Future Model European.</br>You will soon become obsolete.");
     }
     else 
     {
-        pred1=createP("FUTURE ID 03 Pending");
-        pred2=createP("We inform you that you are not yet a Future Model European.</br>We invite you to try again next month.");
+        pred1=createP("FUTURE ID Pending");
+        pred2=createP("We inform you that you are not yet a Future Model European.</br>We invite you to try again tomorrow.");
     }
     pred1.style("top", "100px");
     pred1.style("center","600px");
@@ -2651,37 +2651,37 @@ function createReport () {
         story[0]=createP("You want to become the future model European.");
     }
     else if (answers[0]==1){
-        story[0]=createP("You don’t want to become the future model European.And you seem hardly fit either.");
+        story[0]=createP("You don’t want to become the future model European. And you seem hardly fit either.");
     }
     else if (answers[0]==2){
-        story[0]=createP("You’re not sure that you want to become the future model European.");
+        story[0]=createP("You’re not sure that you want to become the future model European.</br> Check out the mind blowing opportunities.");
     }
     if (answers[1]==0){
-        story[1]=createP("Your face is like a secret code and it shows.");
+        story[1]=createP("You want to contribute to the future.");
     }
     else if (answers[1]==1){
-        story[1]=createP("You believe your face doesn’t show at all.");
+        story[1]=createP("You don’t want to contribute to the future.");
     }
     else if (answers[1]==2){
-        story[1]=createP("You seem to have little awareness of how much your face is revealing.");
+        story[1]=createP("You’re not sure you want to contribute to the future.</br> Do your research now!");
     }
     if (answers[2]==0){
-        story[2]=createP("You want to participate in the future.");
+        story[2]=createP("You know that making forecasts about people is like making forecasts about the weather.");
     }
     else if (answers[2]==1){
-        story[2]=createP("You don’t want to participate in the future.");
+        story[2]=createP("You don’t know that making forecasts about people is like making forecasts about the weather.");
     }
     else if (answers[2]==2){
-        story[2]=createP("You’re not sure you want to participate in the future.");
+        story[2]=createP("You’re unsure that making forecasts about people is like making forecasts about the weather.</br>Check the available documentation more thoroughly.");
     }
     if (answers[3]==0){
-        story[3]=createP("You expect that your face can be read like a page from a book.");
+        story[3]=createP("You want to continue on this path.");
     }
     else if (answers[3]==1){
-        story[3]=createP("You don’t expect that your face can be read like a page from a book.");
+        story[3]=createP("You want to continue on this path.");
     }
     else if (answers[3]==2){
-        story[3]=createP("You’re unsure whether your face can be read like a page from a book. Check it out.");
+        story[3]=createP("You’re not sure you want to continue like this. Be more severe to yourself.");
     }
     if (answers[4]==0){
         story[4]=createP("You believe that making forecasts about people is like making forecasts about the weather.");
@@ -2690,7 +2690,7 @@ function createReport () {
         story[4]=createP("You don’t believe that making forecasts about people is like making forecasts about the weather.");
     }
     else if (answers[4]==2){
-        story[4]=createP("You’re unsure that making forecasts about people is like making forecasts about the weather. Check the available documentation more thoroughly.");
+        story[4]=createP("You’re unsure that making forecasts about people is like making forecasts about the weather.</br>Check the available documentation more thoroughly.");
     }
     if (answers[5]==0){
         story[5]=createP("You want to continue on this path.");
@@ -2699,75 +2699,75 @@ function createReport () {
         story[5]=createP("You don’t want to continue on this path.");
     }
     else if (answers[5]==2){
-        story[5]=createP("You’re not sure you want to continue like this. Think about it.");
+        story[5]=createP("You’re not sure you want to continue like this. Be more severe to yourself.");
     }
     if (answers[6]==0){
         story[6]=createP("You treat people like things and trap them and yourself in self-fulfilling prophecies.");
     }
     else if (answers[6]==1){
-        story[6]=createP("You don’t believe in the power of self-fulfilling prophecies.");
+        story[6]=createP("You don’t believe in the power of self-fulfilling prophecies and that’s a shame.");
     }
     else if (answers[6]==2){
         story[6]=createP("You don’t know what self-fulfilling prophecies are. You should invest some time in the topic.");
     }
     if (answers[7]==0){
-        story[7]=createP("Being backward is good for the soul.");
+        story[7]=createP("You know that 2/3 of Flemish people are backward?");
     }
     else if (answers[7]==1){
-        story[7]=createP("Not?");
+        story[7]=createP("You’re not aware that 2/3 of Flemish people are backward?");
     }
     else if (answers[7]==2){
-        story[7]=createP("It might be the case.");
+        story[7]=createP("You’re not sure that 2/3 of Flemish people are backward? Do some research.");
     }
     if (answers[8]==0){
-        story[8]=createP("Correlation is good for the soul.");
+        story[8]=createP("You are correlated.");
     }
     else if (answers[8]==1){
-        story[8]=createP("Well, shame on you!");
+        story[8]=createP("You think you are not correlated. Stop resisting.");
     }
     else if (answers[8]==2){
-        story[8]=createP("Reconsider your decision.");
+        story[8]=createP("You will soon realize how correlated you are.");
     }
     if (answers[9]==0){
-        story[9]=createP("Submission is good for the soul.");
+        story[9]=createP("As a Future Model European you see yourself in a master role.");
     }
     else if (answers[9]==1){
-        story[9]=createP("Hope you can manage.");
+        story[9]=createP("As Future Model European you see yourself in a slave role.</br>We’ll see to that.");
     }
     else if (answers[9]==2){
-        story[9]=createP("Make up your mind.");
+        story[9]=createP("You need to figure out weather you want to be the master or the slave.</br>We let people decide for themselves.");
     }
     if (answers[10]==0){
-        story[10]=createP("Expansion is good for the soul.");
+        story[10]=createP("Your face holds no secret to us.");
     }
     else if (answers[10]==1){
-        story[10]=createP("Ok, fair enough");
+        story[10]=createP("You hardly exist.");
     }
     else if (answers[10]==2){
-        story[10]=createP("Really? Are you sure you're not?");
+        story[10]=createP("Try to reveal more next time.");
     }
     story[0].style("top", "350px");
     story[0].style("left", "100px");
     story[1].style("top", "375px");
-    story[1].style("right", "200px");
+    story[1].style("left", "200px");
     story[2].style("top", "400px");
-    story[2].style("right", "200px");
+    story[2].style("left", "200px");
     story[3].style("top", "425px");
-    story[3].style("right", "200px");
+    story[3].style("left", "200px");
     story[4].style("top", "450px");
-    story[4].style("right", "200px");
+    story[4].style("left", "200px");
     story[5].style("top", "475px");
-    story[5].style("right", "200px");
+    story[5].style("left", "200px");
     story[6].style("top", "500px");
-    story[6].style("right", "200px");
+    story[6].style("left", "200px");
     story[7].style("top", "525px");
-    story[7].style("right", "200px");
+    story[7].style("left", "200px");
     story[8].style("top", "550px");
-    story[8].style("right", "200px");
+    story[8].style("left", "200px");
     story[9].style("top", "575px");
-    story[9].style("right", "200px");
+    story[9].style("left", "200px");
     story[10].style("top", "600px");
-    story[10].style("right", "200px");
+    story[10].style("left", "200px");
     for (let s of story){
     s.style("position", "absolute");
     s.style("font-size", "20px");
