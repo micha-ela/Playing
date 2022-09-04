@@ -99,6 +99,8 @@
   <script src="./webAR/js/mindar-face-three.prod.js"></script>
 -->
   <script type="module">
+    function webARload(){
+    
     const THREE = window.MINDAR.FACE.THREE;
     const mindarThree = new window.MINDAR.FACE.MindARThree({
       container: document.querySelector("#webAR_cont"),
@@ -121,6 +123,7 @@
     });
   }
     start();
+  }
   </script>
 <!-- END : webAR scripts to place the mesh face mask -->
 <!--
