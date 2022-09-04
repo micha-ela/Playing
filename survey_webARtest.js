@@ -196,6 +196,204 @@ function Step4() {
     removeElements();
     noLoop();
     createButtonsTransStep4();
+let buttons = [];
+let buttonsTrans = [];
+let answers = [];
+let img;
+let sound;
+let valueX;
+let valueY;
+let button;
+let bw;
+let bh;
+let answer1;
+let quest;
+let iter = 1;
+let dataviz=0;
+let sec = 0;
+let timer = 1000;
+let nextChange = timer; //syncs the timer and change rate
+let counter = 1;
+let story=[];
+let counter1 = 0;
+let counter2 = 0;
+let counter3 = 0;
+
+// for dataviz
+let movers = [];
+let movers2 = [];
+let attractors = [];
+let attractor;
+let test;
+let attr_0f;
+let attr_1f;
+let attr_2f;
+let attractors_feat = [];
+let dist = [];
+
+
+function preload() {
+    img_beeld07 = loadImage('webBeeld/beeld07.jpg');
+    img_beeld08 = loadImage('webBeeld/beeld08.jpg');
+    img_beeld09 = loadImage('webBeeld/beeld09.jpg');
+    img_beeld10 = loadImage('webBeeld/beeld10.jpg');
+    img_beeld11 = loadImage('webBeeld/beeld11.jpg');
+    img_beeld12 = loadImage('webBeeld/beeld12.jpg');
+    img_beeld13 = loadImage('webBeeld/beeld13.jpg');
+    img_beeld14 = loadImage('webBeeld/beeld14.jpg');
+    img_beeld15 = loadImage('webBeeld/beeld15.jpg');
+    img_beeld16 = loadImage('webBeeld/beeld16.jpg');
+    img_beeld17 = loadImage('webBeeld/beeld17.jpg');
+    img_beeld18 = loadImage('webBeeld/beeld18.jpg');
+    img_beeld19 = loadImage('webBeeld/beeld19.jpg');
+    img_beeld20 = loadImage('webBeeld/beeld20.jpg');
+    img_beeld21 = loadImage('webBeeld/beeld21.jpg');
+    img_beeld22 = loadImage('webBeeld/beeld22.jpg');
+    img_beeld23 = loadImage('webBeeld/beeld23.jpg');
+    img_beeld30 = loadImage('webBeeld/beeld30.jpg');
+    img_beeld31 = loadImage('webBeeld/beeld31.jpg');
+    img_beeld32 = loadImage('webBeeld/beeld32.jpg');
+    img_beeld33 = loadImage('webBeeld/beeld33.jpg');
+    img_beeld34 = loadImage('webBeeld/beeld34.jpg');
+    img_beeld35 = loadImage('webBeeld/beeld35.jpg');
+    img_beeld36 = loadImage('webBeeld/beeld36.jpg');
+    img_beeld37 = loadImage('webBeeld/beeld37.jpg');
+    img_beeld38 = loadImage('webBeeld/beeld38.jpg');
+    img_beeld39 = loadImage('webBeeld/beeld39.jpg');
+    img_beeld40 = loadImage('webBeeld/beeld40.jpg');
+    img_beeld41 = loadImage('webBeeld/beeld41.jpg');
+    img_beeld42 = loadImage('webBeeld/beeld42.jpg');
+    sound_atlas01 = loadSound('webSound/ATLAS01.mp3');
+    sound_atlas02 = loadSound('webSound/ATLAS02.mp3');
+    sound_atlas03 = loadSound('webSound/ATLAS03.mp3');
+    sound_atlas04 = loadSound('webSound/ATLAS04.mp3');
+    sound_atlas05 = loadSound('webSound/ATLAS05.mp3');
+}
+
+
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+    for (let i = 0; i <50; i++) {
+        let x=random(windowWidth);
+        let y=random(windowHeight);
+        let cx=random(255);
+        let cy=random(255);
+        let cz=random(255);
+        movers[i]=new Mover (x,y,1,1,cx,cy,cz);
+        movers2[i]=new Mover (x,y,1,1,cx,cy,cz);
+    }
+    
+    attractors [0] =new Attractor ((windowWidth/3)*2,windowHeight/3,0,5,random(0,256),random(0,256),random(0,256));
+    attractors [1] =new Attractor (windowWidth/3,(windowHeight/3)*2,0,5,random(0,256),random(0,256),random(0,256));
+    attractors [2] =new Attractor (windowWidth/4,windowHeight/3.5,0,5,random(0,256),random(0,256),random(0,256));
+    attractor =attractors [0];
+    attractors_feat=attractors;
+}
+
+
+
+
+function draw(){
+    if(dataviz==0) {
+        Step1();
+    }
+    else if (dataviz==1){
+    Step12();
+    }
+    else if (dataviz==2){
+        Step13();
+        }
+}
+
+// function draw() {
+
+//     setTimeout(Step1, 1);
+//     // setTimeout(removeElements(),5000);
+//     setTimeout(Step2, 10000);
+//     setTimeout(Step3, 25000);
+//     setTimeout(Step4, 40000);
+//     setTimeout(Step5, 55000);
+//     setTimeout(Step6, 70000);
+//     setTimeout(Step7, 85000);
+//     setTimeout(Step8, 100000);
+//     setTimeout(Step9, 115000);
+//     setTimeout(Step10, 130000);
+//     setTimeout(Step11, 145000);
+
+//     /*}
+//     function windowResized() {
+//         resizeCanvas(windowWidth, windowHeight);*/
+// }
+
+
+function keyPressed() {
+    // selectAll() returns an array of elements with class donkey.
+    // If none are found, it returns an empty array [].
+    let quests = selectAll('.questStep1');
+    // We can then iterate through the array and hide all the elements.
+    for (let i = 0; i < quests.length; i++) {
+        quests[i].hide();
+    }
+}
+
+
+function Step1() {
+    removeElements();
+    noLoop();
+    createQuestStep1();
+    createButtonsStep1();
+    buttons[0].mouseOver(overButton0Step1);
+    // buttons[0].mouseOut(outButton0Step1);
+    buttons[0].mouseClicked(clickButton0Step1);
+
+    // removeQuestStep1() ;
+}
+
+
+function Step2() {
+    removeElements();
+    noLoop();
+    createButtonsTransStep2();
+    createQuestStep2();
+    createButtonsStep2();
+    buttons[0].mouseOver(overButton0Step2);
+    buttons[0].mouseOut(outButton0Step2);
+    buttons[1].mouseOver(overButton1Step2);
+    buttons[1].mouseOut(outButton1Step2);
+    buttons[2].mouseOver(overButton2Step2);
+    buttons[2].mouseOut(outButton2Step2);
+    buttonsTrans[0].mouseOver(overButtonTrans0Step2);
+    buttonsTrans[1].mouseOver(overButtonTrans1Step2);
+    buttonsTrans[2].mouseOver(overButtonTrans2Step2);
+    buttons[0].mouseClicked(clickButton0Step2);
+    buttons[1].mouseClicked(clickButton1Step2);
+    buttons[2].mouseClicked(clickButton2Step2);
+}
+
+function Step3() {
+    removeElements();
+    noLoop();
+    createButtonsTransStep3();
+    createQuestStep3();
+    createButtonsStep3();
+    buttons[0].mouseOver(overButton0Step3);
+    buttons[0].mouseOut(outButton0Step3);
+    buttons[1].mouseOver(overButton1Step3);
+    buttons[1].mouseOut(outButton1Step3);
+    buttons[2].mouseOver(overButton2Step3);
+    buttons[2].mouseOut(outButton2Step3);
+    buttonsTrans[0].mouseOver(overButtonTrans0Step3);
+    buttonsTrans[1].mouseOver(overButtonTrans1Step3);
+    buttonsTrans[2].mouseOver(overButtonTrans2Step3);
+    buttons[0].mouseClicked(clickButton0Step3);
+    buttons[1].mouseClicked(clickButton1Step3);
+    buttons[2].mouseClicked(clickButton2Step3);
+}
+
+function Step4() {
+    removeElements();
+    noLoop();
+    createButtonsTransStep4();
     createQuestStep4();
     createButtonsStep4();
     buttons[0].mouseOver(overButton0Step4);
@@ -360,98 +558,89 @@ function Step12 () {
     createButtonsTransStep12();
     createQuestStep12();
     createButtonsStep12();
-    buttons[0].mouseOver(overButton0Step12);
-    buttons[0].mouseOut(outButton0Step12);
-    buttons[1].mouseOver(overButton1Step12);
-    buttons[1].mouseOut(outButton1Step12);
-    buttons[2].mouseOver(overButton2Step12);
-    buttons[2].mouseOut(outButton2Step12);
-    // buttonsTrans[0].mouseOver(overButtonTrans0Step12);
-    // buttonsTrans[1].mouseOver(overButtonTrans1Step12);
-    // buttonsTrans[2].mouseOver(overButtonTrans2Step12);
     buttons[0].mouseClicked(clickButton0Step12);
     buttons[1].mouseClicked(clickButton1Step12);
     buttons[2].mouseClicked(clickButton2Step12);
     step();
-    if (iter < 2) {
+    if (iter < 2) { 
         // Increase counter everytime
-        counter += 0.05;
+        counter += 0.05; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
-    else if (iter < 3) {
+    else if (iter < 3) { 
         // Increase counter everytime
-        counter += 0.01;
+        counter += 0.01; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
-    else if (iter < 4) {
+    else if (iter < 4) { 
         // Increase counter everytime
-        counter += 0.05;
+        counter += 0.05; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
-    else if (iter < 5) {
+    else if (iter < 5) { 
         // Increase counter everytime
-        counter += 0.05;
+        counter += 0.05; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
-   else if (iter < 6) {
+   else if (iter < 6) { 
         // Increase counter everytime
-        counter += 0.05;
+        counter += 0.05; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
-   else if (iter < 7) {
+   else if (iter < 7) { 
         // Increase counter everytime
-        counter += 0.01;
+        counter += 0.01; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
-    else if (iter < 8) {
+    else if (iter < 8) { 
         // Increase counter everytime
-        counter += 0.05;
+        counter += 0.05; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
-    else if (iter < 9) {
+    else if (iter < 9) { 
         // Increase counter everytime
-        counter += 0.05;
+        counter += 0.05; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
-   else if (iter < 10) {
+   else if (iter < 10) { 
         // Increase counter everytime
-        counter += 0.05;
+        counter += 0.05; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
-   else if (iter < 11) {
+   else if (iter < 11) { 
         // Increase counter everytime
-        counter += 0.01;
+        counter += 0.01; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
-    else if (iter < 15) {
+    else if (iter < 15) { 
         // Increase counter everytime
-        counter += 0.01;
+        counter += 0.01; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
     else {
-
+ 
         // If iter increases by 11 then
         // stop the loop
         noLoop();
@@ -519,7 +708,7 @@ function outButton0Step1() {
 
 }
 
-// / micha toegevoegd voor next step on click
+// / micha toegevoegd voor next step on click 
 
 function clickButton0Step1 () {
 
@@ -602,7 +791,7 @@ function outButton0Step2() {
 
 }
 function overButtonTrans0Step2() {
-
+    
     background(img_beeld07);
 
 }
@@ -626,7 +815,7 @@ function outButton1Step2() {
 
 }
 function overButtonTrans1Step2() {
-
+    
     background(img_beeld40);
 }
 
@@ -649,7 +838,7 @@ function outButton2Step2() {
 
 }
 function overButtonTrans2Step2() {
-
+    
     background(img_beeld08);
 }
 
@@ -1943,7 +2132,7 @@ function overButtonTrans2Step11() {
 // // / micha toegevoegd voor next step on click en om antwoord op te slaan
 
 function clickButton0Step11 () {
-     sound_atlas01.play();
+     sound_atlas01.play();   
      answers[9]=0;
      dataviz=1;
      Step12();
@@ -1995,6 +2184,8 @@ function createButtonsStep12() {
         button.style("font-size", "20px");
         button.style("font-family", "coordinates");
         button.style("border", "none");
+                //// BART: TOEVOEGEN VAN onclick="webARload()" OM DE webAR TE LADEN VIA HET KLIKKEN VAN DEZE 'button' 
+        button.setAttribute("onclick","webARload()");
     }
 }
 
@@ -2018,8 +2209,6 @@ function createButtonsStep12() {
          //buttons.style("font-size","20px");
          //buttons.style("font-family","coordinates");
         button.style("border", "none");
-        //// BART: TOEVOEGEN VAN onclick="webARload()" OM DE webAR TE LADEN VIA HET KLIKKEN VAN DEZE 'button' 
-        button.setAttribute("onclick","webARload()");
    }
 }
 
@@ -2093,19 +2282,19 @@ function overButtonTrans2Step12() {
 // // / micha toegevoegd voor next step on click en om antwoord op te slaan
 
 function clickButton0Step12 () {
-    answers[10]=0;
+    // answers[10]=0;
     dataviz=2;
     Step13();
 }
 
 function clickButton1Step12 () {
-    answers[10]=1;
+    // answers[10]=1;
     dataviz=2;
     Step13();
 }
 
 function clickButton2Step12 () {
-    answers[10]=2;
+    // answers[10]=2;
     dataviz=2;
     Step13();
 }
@@ -2133,7 +2322,7 @@ function createButtonsStep13() {
         button.style("font-family", "coordinates");
         button.style("border", "none");
     }
-}
+}   
 
 
 // // / micha toegevoegd voor next step on click en om antwoord op te slaan
@@ -2210,7 +2399,7 @@ class Mover {
                 // this.color.set(200,200,200);
                 // console.log("dist1 " +distance1);
                 // console.log("dist2 " +distance2);
-            }
+            } 
             if (dist2 < dist0 && dist2 < dist1){
                 this.cluster=3;
             }
@@ -2218,7 +2407,7 @@ class Mover {
             // console.log(dist0);
             // console.log(dist1);
             // // console.log(feat1);
-
+                    
         }
 
 
@@ -2240,7 +2429,7 @@ class Mover {
         this.vel.add(this.acc);
         this.vel.limit(10);
         this.pos.add(this.vel);
-        this.acc.set(0,0);
+        this.acc.set(0,0); 
         // this.acc.setMag(0.1);
         if (this.lifespan > 50){
         this.lifespan -= 1;
@@ -2252,7 +2441,7 @@ class Mover {
         this.vel.add(this.acc);
         this.vel.limit(10);
         this.pos.add(this.vel);
-        this.acc.set(0,0);
+        this.acc.set(0,0); 
         // console.log(this.counter2);
         // this.acc.setMag(0.1);
         this.counter2 += 1;
@@ -2274,13 +2463,13 @@ class Mover {
                 this.lifespan -= 1;
                 }
             }
-        }
+        }  
 
     resetFeat () {
         this.vel.add(this.acc);
         this.vel.limit(10);
         this.pos.add(this.vel);
-        this.acc.set(0,0);
+        this.acc.set(0,0); 
         this.color.set(this.colori);
             if (this.lifespan > 10){
             this.lifespan += 3;
@@ -2288,7 +2477,7 @@ class Mover {
             // console.log(this.color.x);
             // console.log(this.colori.x);
         }
-
+        
 
     }
 
@@ -2315,14 +2504,14 @@ class Attractor {
         force.setMag(strength);
         mover.applyForce (force);
     }
-
+    
     show() {
         stroke(255);
         strokeWeight(2);
         fill(this.color.x, this.color.y, this.color.z);
         ellipse(this.pos.x,this.pos.y,this.shape.x*2,this.shape.y*2);
     }
-
+    
 
 }
 
@@ -2348,7 +2537,7 @@ function AveFeatCluster () {
             attr_2f.add(feat);
             counter3 +=1;
         }
-    }
+    } 
     attr_0f.div(counter1);
     attr_1f.div(counter2);
     attr_2f.div(counter3);
@@ -2356,8 +2545,8 @@ function AveFeatCluster () {
 }
 
 
-function CreateMovers1 () {
-
+function CreateMovers1 () {   
+    
     frameRate(5);
     for (let mover of movers) {
     // mover.update();
@@ -2420,7 +2609,7 @@ function MoversResetFeat () {
         }
 }
 
-// function CreateMovers2 () {
+// function CreateMovers2 () {       
 //     frameRate(1);
 //     for (let mover of movers2) {
 //     // mover.update();
@@ -2437,7 +2626,7 @@ function MoversResetFeat () {
 //     }
 
 
-function CreateMovers2 () {
+function CreateMovers2 () {       
     frameRate(5);
     for (let mover of movers) {
         mover.update();
@@ -2519,7 +2708,7 @@ function CreateMovers2 () {
     // }
 
 
-    function CreateMovers3 () {
+    function CreateMovers3 () {       
         frameRate(5);
         for (let mover of movers) {
             mover.update();
@@ -2547,8 +2736,8 @@ function CreateMovers2 () {
         movers.push(new Mover(random(windowWidth),random(windowHeight),1,5,cx_1f,cy_1f,cz_1f));
         movers.push(new Mover(random(windowWidth),random(windowHeight),1,5,cx_2f,cy_2f,cz_2f));
         }
-
-
+    
+    
 
 function step () {
     switch (iter) {
@@ -2567,7 +2756,7 @@ function step () {
         case 4:
             clear();
             MoversResetFeat();
-            break;
+            break;    
         case 5:
             clear();
             CreateMovers2();
@@ -2583,7 +2772,7 @@ function step () {
         case 8:
             clear();
             MoversResetFeat();
-            break;
+            break;    
         case 9:
             clear();
             CreateMovers3();
@@ -2600,39 +2789,44 @@ function step () {
     }
 
 
-
+    
 
 
     ///////////////////////////////////
-/// rapport
+/// rapport 
 
 
 function createReport () {
     /// We tellen per gebruiker de Yes, No en Maybe
+    counter1=0;
+    counter2=0;
+    counter3=0;
     for (var i = 0; i < 10; i++){
         if (answers[i]==0){
             counter1++;
-            print(counter1);
+            console.log(counter1);            
         }
         if (answers[i]==1){
             counter2++;
+            console.log(counter2);   
         }
         if (answers[i]==2){
             counter3++;
+            console.log(counter3); 
         }
     }
     /// Your future ID
-    if (counter1>6)
+    if (counter1>5)
     {
         pred1=createP("Your FUTURE ID is Future Model European");
         pred2=createP("Congratulations. You are accepted as a Future Model European!");
     }
-    else if (counter2>6)
+    else if (counter2>5)
     {
         pred1=createP("Your FUTURE ID is Obsolete");
         pred2=createP("We regret to inform you that you are not accepted as a Future Model European.</br>You will soon become obsolete.");
     }
-    else
+    else 
     {
         pred1=createP("You FUTURE ID is Pending");
         pred2=createP("We inform you that you are not yet a Future Model European.</br>We invite you to try again tomorrow.");
@@ -2649,7 +2843,7 @@ function createReport () {
     pred2.style("font-size", "38px");
     pred2.style("font-family", "coordinates");
     pred2.style("font-weight", "bold");
-    /// De rest van het rapport = de antwoorden die de gebruiker gaf
+    /// De rest van het rapport = de antwoorden die de gebruiker gaf 
     if (answers[0]==0){
         story[0]=createP("You want to become the future model European.");
     }
@@ -2709,7 +2903,7 @@ function createReport () {
     }
     else if (answers[6]==1){
         story[6]=createP("You are not aware that 2/3 of Flemish people are backward.");
-    }
+    } 
     else if (answers[6]==2){
         story[6]=createP("You are not sure that 2/3 of Flemish people are backward? Do some research.");
     }
@@ -2761,7 +2955,7 @@ function createReport () {
     story[8].style("left", "200px");
     story[9].style("top", "890px");
     story[9].style("left", "200px");
-
+ 
     for (let s of story){
     s.style("position", "absolute");
     s.style("font-size", "20px");
