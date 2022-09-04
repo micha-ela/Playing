@@ -360,15 +360,6 @@ function Step12 () {
     createButtonsTransStep12();
     createQuestStep12();
     createButtonsStep12();
-    buttons[0].mouseOver(overButton0Step12);
-    buttons[0].mouseOut(outButton0Step12);
-    buttons[1].mouseOver(overButton1Step12);
-    buttons[1].mouseOut(outButton1Step12);
-    buttons[2].mouseOver(overButton2Step12);
-    buttons[2].mouseOut(outButton2Step12);
-    // buttonsTrans[0].mouseOver(overButtonTrans0Step12);
-    // buttonsTrans[1].mouseOver(overButtonTrans1Step12);
-    // buttonsTrans[2].mouseOver(overButtonTrans2Step12);
     buttons[0].mouseClicked(clickButton0Step12);
     buttons[1].mouseClicked(clickButton1Step12);
     buttons[2].mouseClicked(clickButton2Step12);
@@ -2091,19 +2082,19 @@ function overButtonTrans2Step12() {
 // // / micha toegevoegd voor next step on click en om antwoord op te slaan
 
 function clickButton0Step12 () {
-    answers[10]=0;
+    // answers[10]=0;
     dataviz=2;
     Step13();
 }
 
 function clickButton1Step12 () {
-    answers[10]=1;
+    // answers[10]=1;
     dataviz=2;
     Step13();
 }
 
 function clickButton2Step12 () {
-    answers[10]=2;
+    // answers[10]=2;
     dataviz=2;
     Step13();
 }
@@ -2607,16 +2598,21 @@ function step () {
 
 function createReport () {
     /// We tellen per gebruiker de Yes, No en Maybe
+    counter1=0;
+    counter2=0;
+    counter3=0;
     for (var i = 0; i < 10; i++){
         if (answers[i]==0){
             counter1++;
-            print(counter1);            
+            console.log(counter1);            
         }
         if (answers[i]==1){
             counter2++;
+            console.log(counter2);   
         }
         if (answers[i]==2){
             counter3++;
+            console.log(counter3); 
         }
     }
     /// Your future ID
