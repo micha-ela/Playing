@@ -47,7 +47,7 @@
 	}
 	#webAR_cont canvas { 
 		background-color: transparent; 
-		opacity: 0.4; 
+		opacity: 0.1; 
 		overflow: inherit;
 		
 		-webkit-transform: scaleX(-1);
@@ -107,5 +107,8 @@
       start();
     </script>
       <!-- END : webAR scripts to place the mesh face mask -->
-	
+	 <script>
+	document.getElementsByTagName("button").addEventListener("click", function(){
+document.getElementById("webAR_cont").getElementsByTagName("canvas").style.opacity  =   document.getElementById("webAR_cont").getElementsByTagName("canvas").style.opacity*0.2; });
+		  </script>
 </html>
