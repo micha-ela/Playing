@@ -2018,6 +2018,8 @@ function createButtonsStep12() {
          //buttons.style("font-size","20px");
          //buttons.style("font-family","coordinates");
         button.style("border", "none");
+        //// BART: TOEVOEGEN VAN onclick="webARload()" OM DE webAR TE LADEN VIA HET KLIKKEN VAN DEZE 'button' 
+        button.setAttribute("onclick","webARload()");
    }
 }
 
