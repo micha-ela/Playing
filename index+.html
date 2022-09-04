@@ -108,7 +108,8 @@
     </script>
       <!-- END : webAR scripts to place the mesh face mask -->
 	 <script>
-	document.getElementsByTagName("button").addEventListener("click", function(){
-document.getElementById("webAR_cont").getElementsByTagName("canvas").style.opacity  =   document.getElementById("webAR_cont").getElementsByTagName("canvas").style.opacity*0.2; });
+	//// document.getElementsByTagName("button").addEventListener("click", function(){
+		 document.getElementsByTagName("button").onclick = function () {
+document.getElementById("webAR_cont").getElementsByTagName("canvas").style.opacity = document.getElementById("webAR_cont").getElementsByTagName("canvas").style.opacity*0.2; });
 		  </script>
 </html>
