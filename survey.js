@@ -2117,7 +2117,7 @@ function createButtonsStep13() {
     buttons[0] = createButton("START </br> AGAIN");
     // buttons[1] = createButton("Very");
     // buttons[2] = createButton("Uh?");
-    buttons[0].position(width * 0.85, height * 0.25);
+    buttons[0].position(width * 0.85, height * 0.35);
     // buttons[1].position(width * 0.8, height * 0.75);
     // buttons[2].position(width * 0.9, height * 0.35);
     // let bw=concat(",1000,px");
