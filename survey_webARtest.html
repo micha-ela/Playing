@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sketch</title>
+
+  <link rel="stylesheet" href="https://use.typekit.net/ilr2sfa.css">
+  <link rel="stylesheet" href="./css/styles-code.css">
+
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+  <script src="libraries/p5.dimensions.js"></script>
+  <script src="libraries/p5.func.min.js"></script>
+  <script src="survey.js"></script>
+
+  <style>
+  main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  #defaultCanvas0 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  button {
+    z-index: 100 !important;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  button:hover ~ #webAR_cont canvas {
+    width: 200vw;
+  }
+
+  /* <!-- BEGIN : webAR style to place the mesh face mask --> */
+  #webAR_cont {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: inherit;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  #webAR_cont canvas {
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    opacity: 0.1;
+    overflow: inherit;
+
+    /* canvas horizontal flip -> correction camera mirror */
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+
+    /* width scale animation when button:hover */
+    transition: width 0.3s;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  #webAR_cont video {
+    display: none;
+  }
+  /* END : webAR style to place the mesh face mask */
+
+  </style>
+
+</head>
+
+<body>
+
+  <p>
+    CODE 2022: Reclaiming Digital Agency</br>
+    IMPAKT [Centre for Media Culture] (NL), School of Machines, Making & Make Believe (DE), Werktank (BE), Privacy Salon/Privacytopia (BE) present
+  </br>ATLAS OF ID developed by Michaëla Stubbers, Bart VandePut and Fanny Zaman ©2022
+</p>
+
+<!-- BEGIN : webAR container to place the mesh face mask -->
+<div id="webAR_cont">
+</div>
+<!-- END : webAR container to place the mesh face mask -->
+
+</body>
+
+<!-- BEGIN : webAR scripts to place the mesh face mask -->
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.5/dist/mindar-face-three.prod.js"></script>
+<!--
+  <script src="./webAR/js/mindar-face-three.prod.js"></script>
+-->
+  <script type="module">
+    const THREE = window.MINDAR.FACE.THREE;
+    const mindarThree = new window.MINDAR.FACE.MindARThree({
+      container: document.querySelector("#webAR_cont"),
+    });
+    const {renderer, scene, camera} = mindarThree;
+    const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
+      scene.add(light);
+    const faceMesh = mindarThree.addFaceMesh();
+    const texture = new THREE.TextureLoader().load('./webAR/img/canonical_face_model_uv_WHITE_02.png');
+      faceMesh.material.map = texture;
+      faceMesh.material.transparent = true;
+      faceMesh.material.opacity = 1.0;
+      //// faceMesh.material.opacity = 1 + Math.sin(new Date().getTime() * .0025); // or any other value you like
+      faceMesh.material.needsUpdate = true;
+      scene.add(faceMesh);
+    const start = async() => {
+    await mindarThree.start();
+      renderer.setAnimationLoop(() => {
+      renderer.render(scene, camera);
+    });
+  }
+    start();
+  </script>
+<!-- END : webAR scripts to place the mesh face mask -->
+<!--
+  <script>
+    //// document.getElementsByTagName("button").addEventListener("click", function(){
+      document.getElementsByTagName("button").onclick = function () {
+        document.getElementById("webAR_cont").getElementsByTagName("canvas").style.opacity = document.getElementById("webAR_cont").getElementsByTagName("canvas").style.opacity*0.2; });
+  </script>
+-->
+</html>
