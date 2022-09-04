@@ -2616,12 +2616,12 @@ function createReport () {
         }
     }
     /// Your future ID
-    if (counter1>6)
+    if (counter1>5)
     {
         pred1=createP("Your FUTURE ID is Future Model European");
         pred2=createP("Congratulations. You are accepted as a Future Model European!");
     }
-    else if (counter2>6)
+    else if (counter2>5)
     {
         pred1=createP("Your FUTURE ID is Obsolete");
         pred2=createP("We regret to inform you that you are not accepted as a Future Model European.</br>You will soon become obsolete.");
