@@ -32,7 +32,7 @@
 	button { 
 		z-index: 100 !important; 
 	}
-	button:hover ~ #webAR_cont {
+	button:hover ~ #webAR_cont canvas {
   	width: 200vw;
 	}
 		
@@ -47,14 +47,21 @@
 			top: 0; 
 			left: 0; 
 		z-index: 2; 
-		
-		transition: width 0.3s;
 	}
 	#webAR_cont canvas { 
+		width: 100vw;
+		height: 100vh;
 		background-color: transparent; 
 		opacity: 0.1; 
 		overflow: inherit;
 		
+		/* canvas horizontal flip -> correction camera mirror */
+		-webkit-transform: scaleX(-1);
+  		transform: scaleX(-1);
+		
+		/* width scale animation when button:hover */
+		transition: width 0.3s;
+
 		position: absolute; 
 			top: 0; 
 			left: 0; 
