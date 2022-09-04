@@ -32,8 +32,11 @@
 	button { 
 		z-index: 100 !important; 
 	}
+	button:hover ~ #webAR_cont canvas {
+	-webkit-transform: translate(100px, 20px);
+	}
+		
 	/* <!-- BEGIN : webAR style to place the mesh face mask --> */
-
 	#webAR_cont {
 		width: 100vw;
 		height: 100vh;
@@ -50,19 +53,24 @@
 		opacity: 0.1; 
 		overflow: inherit;
 		
-		-webkit-transform: scaleX(-1);
-  		transform: scaleX(-1);
+		-webkit-transition: transform 1s;
+  		-webkit-transition-timing: ease-in-out;
+  		-webkit-transition-delay: 0.1s;
+  		/* float: left; */
 
 		position: absolute; 
 			top: 0; 
 			left: 0; 
 		z-index: 2; 
+		
+		
 	}
 	#webAR_cont video { 
 		display: none;
 	}
+	/* END : webAR style to place the mesh face mask */
+
 	</style>
-	<!-- END : webAR style to place the mesh face mask -->
 	  
   </head>
 
@@ -109,7 +117,7 @@
       <!-- END : webAR scripts to place the mesh face mask -->
 	 <script>
 	//// document.getElementsByTagName("button").addEventListener("click", function(){
-		 document.getElementsByTagName("button").onclick = function () {
-document.getElementById("webAR_cont").getElementsByTagName("canvas").style.opacity = document.getElementById("webAR_cont").getElementsByTagName("canvas").style.opacity*0.2; });
+	//// document.getElementsByTagName("button").onclick = function () {
+	//// document.getElementById("webAR_cont").getElementsByTagName("canvas").style.opacity = document.getElementById("webAR_cont").getElementsByTagName("canvas").style.opacity*0.2; });
 		  </script>
 </html>
