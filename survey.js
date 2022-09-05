@@ -1970,7 +1970,7 @@ function clickButton0Step11 () {
 }
 
 function createButtonsStep12() {
-    buttons[0] = createButton("Finalizing</br>...");
+    buttons[0] = createButton("Press</br>Finalizing</br>...");
    // buttons[1] = createButton("");
    // buttons[2] = createButton("");
     buttons[0].position(width * 0.47, height * 0.80);
