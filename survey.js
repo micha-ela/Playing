@@ -1959,7 +1959,7 @@ function clickButton0Step11 () {
 
  function createQuestStep12() {
     // quest1.hide();
-    quest1Step12 = createP("A moment please. This might take a minute.");
+    quest1Step12 = createP("A moment please. This might take a minute.</br>We are generating your rapport.");
     quest1Step12.style("top", "150px");
     quest1Step12.style("right", "680px");
     quest1Step12.style("position", "absolute");
