@@ -147,8 +147,9 @@ function Step1() {
     buttons[0].mouseOver(overButton0Step1);
     // buttons[0].mouseOut(outButton0Step1);
     buttons[0].mouseClicked(clickButton0Step1);
-
     // removeQuestStep1() ;
+    fill(0,0,0);
+    rect(0,0,width/13,10);
 }
 
 
@@ -357,12 +358,13 @@ function Step12 () {
     clear();
     loop();
     // frameRate(1);
-    createButtonsTransStep12();
+    // createButtonsTransStep12();
     createQuestStep12();
     createButtonsStep12();
+    buttons[0].mouseOver(overButton0Step12);
     buttons[0].mouseClicked(clickButton0Step12);
-    buttons[1].mouseClicked(clickButton1Step12);
-    buttons[2].mouseClicked(clickButton2Step12);
+    // buttons[1].mouseClicked(clickButton1Step12);
+    // buttons[2].mouseClicked(clickButton2Step12);
     step();
     if (iter < 2) { 
         // Increase counter everytime
@@ -447,6 +449,8 @@ function Step12 () {
         // stop the loop
         noLoop();
     }
+    fill(0,0,0);
+    rect(0,0,(width/13)*12,10);
 }
 
 function Step13(){
@@ -456,6 +460,8 @@ function Step13(){
     createReport();
     createButtonsStep13();
     buttons[0].mouseClicked(clickButton0Step13);
+    fill(0,0,0);
+    rect(0,0,(width/13)*13,10);
 
 }
 
@@ -595,7 +601,8 @@ function outButton0Step2() {
 function overButtonTrans0Step2() {
     
     background(img_beeld07);
-
+    fill(0,0,0);
+    rect(0,0,(width/13)*2,10);
 }
 
 
@@ -618,7 +625,9 @@ function outButton1Step2() {
 }
 function overButtonTrans1Step2() {
     
-    background(img_beeld40);
+    background(img_beeld40);   
+    fill(0,0,0);
+    rect(0,0,(width/13)*2,10);
 }
 
 
@@ -642,6 +651,8 @@ function outButton2Step2() {
 function overButtonTrans2Step2() {
     
     background(img_beeld08);
+    fill(0,0,0);
+    rect(0,0,(width/13)*2,10);
 }
 
 // / micha toegevoegd voor next step on click en om antwoord op te slaan
@@ -742,6 +753,8 @@ function outButton0Step3() {
 }
 function overButtonTrans0Step3() {
     background(img_beeld09);
+    fill(0,0,0);
+    rect(0,0,(width/13)*3,10);
 }
 
 
@@ -763,6 +776,8 @@ function outButton1Step3() {
 }
 function overButtonTrans1Step3() {
     background(img_beeld31);
+    fill(0,0,0);
+    rect(0,0,(width/13)*3,10);
 }
 
 
@@ -785,6 +800,8 @@ function outButton2Step3() {
 }
 function overButtonTrans2Step3() {
     background(img_beeld10);
+    fill(0,0,0);
+    rect(0,0,(width/13)*3,10);
 }
 
 // / micha toegevoegd voor next step on click en om antwoord op te slaan
@@ -883,6 +900,8 @@ function outButton0Step4() {
 }
 function overButtonTrans0Step4() {
     background(img_beeld11);
+    fill(0,0,0);
+    rect(0,0,(width/13)*4,10);
 }
 
 
@@ -906,6 +925,8 @@ function outButton1Step4() {
 }
 function overButtonTrans1Step4() {
     background(img_beeld32);
+    fill(0,0,0);
+    rect(0,0,(width/13)*4,10);
 }
 
 
@@ -928,6 +949,8 @@ function outButton2Step4() {
 }
 function overButtonTrans2Step4() {
     background(img_beeld12);
+    fill(0,0,0);
+    rect(0,0,(width/13)*4,10);
 }
 
 // / micha toegevoegd voor next step on click en om antwoord op te slaan
@@ -1026,6 +1049,8 @@ function outButton0Step5() {
 }
 function overButtonTrans0Step5() {
     background(img_beeld13);
+    fill(0,0,0);
+    rect(0,0,(width/13)*5,10);
 }
 
 
@@ -1048,8 +1073,9 @@ function outButton1Step5() {
 }
 function overButtonTrans1Step5() {
     background(img_beeld33);
+    fill(0,0,0);
+    rect(0,0,(width/13)*5,10);
 }
-
 
 function overButton2Step5() {
     sound_atlas03.play();
@@ -1070,6 +1096,8 @@ function outButton2Step5() {
 }
 function overButtonTrans2Step5() {
     background(img_beeld14);
+    fill(0,0,0);
+    rect(0,0,(width/13)*5,10);
 }
 
 
@@ -1168,6 +1196,8 @@ function outButton0Step6() {
 }
 function overButtonTrans0Step6() {
     background(img_beeld15);
+    fill(0,0,0);
+    rect(0,0,(width/13)*6,10);
 }
 
 
@@ -1190,6 +1220,8 @@ function outButton1Step6() {
 }
 function overButtonTrans1Step6() {
     background(img_beeld34);
+    fill(0,0,0);
+    rect(0,0,(width/13)*6,10);
 }
 
 
@@ -1213,6 +1245,8 @@ function outButton2Step6() {
 }
 function overButtonTrans2Step6() {
     background(img_beeld16);
+    fill(0,0,0);
+    rect(0,0,(width/13)*6,10);
 }
 
 // / micha toegevoegd voor next step on click en om antwoord op te slaan
@@ -1311,6 +1345,8 @@ function outButton0Step7() {
 }
 function overButtonTrans0Step7() {
     background(img_beeld17);
+    fill(0,0,0);
+    rect(0,0,(width/13)*7,10);
 }
 
 
@@ -1333,6 +1369,8 @@ function outButton1Step7() {
 }
 function overButtonTrans1Step7() {
     background(img_beeld35);
+    fill(0,0,0);
+    rect(0,0,(width/13)*7,10);
 }
 
 
@@ -1355,6 +1393,8 @@ function outButton2Step7() {
 }
 function overButtonTrans2Step7() {
     background(img_beeld18);
+    fill(0,0,0);
+    rect(0,0,(width/13)*7,10);
 }
 
 
@@ -1457,6 +1497,8 @@ function outButton0Step8() {
 }
 function overButtonTrans0Step8() {
     background(img_beeld19);
+    fill(0,0,0);
+    rect(0,0,(width/13)*8,10);
 }
 
 
@@ -1479,6 +1521,8 @@ function outButton1Step8() {
 }
 function overButtonTrans1Step8() {
     background(img_beeld36);
+    fill(0,0,0);
+    rect(0,0,(width/13)*8,10);
 }
 
 
@@ -1501,6 +1545,8 @@ function outButton2Step8() {
 }
 function overButtonTrans2Step8() {
     background(img_beeld20);
+    fill(0,0,0);
+    rect(0,0,(width/13)*8,10);
 }
 
 
@@ -1601,6 +1647,8 @@ function outButton0Step9() {
 }
 function overButtonTrans0Step9() {
     background(img_beeld21);
+    fill(0,0,0);
+    rect(0,0,(width/13)*9,10);
 }
 
 
@@ -1623,6 +1671,8 @@ function outButton1Step9() {
 }
 function overButtonTrans1Step9() {
     background(img_beeld37);
+    fill(0,0,0);
+    rect(0,0,(width/13)*9,10);
 }
 
 
@@ -1645,6 +1695,8 @@ function outButton2Step9() {
 }
 function overButtonTrans2Step9() {
     background(img_beeld22);
+    fill(0,0,0);
+    rect(0,0,(width/13)*9,10);
 }
 
 // / micha toegevoegd voor next step on click en om antwoord op te slaan
@@ -1743,6 +1795,8 @@ function outButton0Step10() {
 }
 function overButtonTrans0Step10() {
     background(img_beeld23);
+    fill(0,0,0);
+    rect(0,0,(width/13)*10,10);
 }
 
 
@@ -1765,6 +1819,8 @@ function outButton1Step10() {
 }
 function overButtonTrans1Step10() {
     background(img_beeld38);
+    fill(0,0,0);
+    rect(0,0,(width/13)*10,10);
 }
 
 
@@ -1787,6 +1843,8 @@ function outButton2Step10() {
 }
 function overButtonTrans2Step10() {
     background(img_beeld39);
+    fill(0,0,0);
+    rect(0,0,(width/13)*10,10);
 }
 
 // / micha toegevoegd voor next step on click en om antwoord op te slaan
@@ -1885,6 +1943,8 @@ function outButton0Step11() {
 }
 function overButtonTrans0Step11() {
     background(img_beeld30);
+    fill(0,0,0);
+    rect(0,0,(width/13)*11,10);
 }
 
 
@@ -1907,6 +1967,8 @@ function outButton1Step11() {
 }
 function overButtonTrans1Step11() {
     background(img_beeld41);
+    fill(0,0,0);
+    rect(0,0,(width/13)*11,10);
 }
 
 
@@ -1929,6 +1991,8 @@ function outButton2Step11() {
 }
 function overButtonTrans2Step11() {
     background(img_beeld42);
+    fill(0,0,0);
+    rect(0,0,(width/13)*11,10);
 }
 
 // // / micha toegevoegd voor next step on click en om antwoord op te slaan
