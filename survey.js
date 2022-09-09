@@ -362,7 +362,8 @@ function Step12 () {
     createQuestStep12();
     createButtonsStep12();
     buttons[0].mouseOver(overButton0Step12);
-    buttons[0].mouseClicked(clickButton0Step12);
+    setTimeout(clickButton0Step12,70000);
+    // buttons[0].mouseClicked(clickButton0Step12);
     // buttons[1].mouseClicked(clickButton1Step12);
     // buttons[2].mouseClicked(clickButton2Step12);
     step();

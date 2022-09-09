@@ -21,6 +21,7 @@ let counter1 = 0;
 let counter2 = 0;
 let counter3 = 0;
 
+
 // for dataviz
 let movers = [];
 let movers2 = [];
@@ -65,11 +66,11 @@ function preload() {
     img_beeld40 = loadImage('webBeeld/beeld40.jpg');
     img_beeld41 = loadImage('webBeeld/beeld41.jpg');
     img_beeld42 = loadImage('webBeeld/beeld42.jpg');
-    sound_atlas01 = loadSound('webSound/ATLAS01.mp3');
-    sound_atlas02 = loadSound('webSound/ATLAS02.mp3');
-    sound_atlas03 = loadSound('webSound/ATLAS03.mp3');
-    sound_atlas04 = loadSound('webSound/ATLAS04.mp3');
-    sound_atlas05 = loadSound('webSound/ATLAS05.mp3');
+    // sound_atlas01 = loadSound('webSound/ATLAS01.mp3');
+    // sound_atlas02 = loadSound('webSound/ATLAS02.mp3');
+    // sound_atlas03 = loadSound('webSound/ATLAS03.mp3');
+    // sound_atlas04 = loadSound('webSound/ATLAS04.mp3');
+    // sound_atlas05 = loadSound('webSound/ATLAS05.mp3');
 }
 
 
@@ -100,9 +101,11 @@ function draw(){
         Step1();
     }
     else if (dataviz==1){
+        // loop();
     Step12();
+    // setTimeout(function(){text("tetst")},3000);
     }
-    else if (dataviz==2){
+        else if (dataviz==2){
         Step13();
         }
 }
@@ -158,15 +161,15 @@ function Step2() {
     createButtonsTransStep2();
     createQuestStep2();
     createButtonsStep2();
-    buttons[0].mouseOver(overButton0Step2);
-    buttons[0].mouseOut(outButton0Step2);
-    buttons[1].mouseOver(overButton1Step2);
-    buttons[1].mouseOut(outButton1Step2);
-    buttons[2].mouseOver(overButton2Step2);
-    buttons[2].mouseOut(outButton2Step2);
-    buttonsTrans[0].mouseOver(overButtonTrans0Step2);
-    buttonsTrans[1].mouseOver(overButtonTrans1Step2);
-    buttonsTrans[2].mouseOver(overButtonTrans2Step2);
+    // buttons[0].mouseOver(overButton0Step2);
+    // buttons[0].mouseOut(outButton0Step2);
+    // buttons[1].mouseOver(overButton1Step2);
+    // buttons[1].mouseOut(outButton1Step2);
+    // buttons[2].mouseOver(overButton2Step2);
+    // buttons[2].mouseOut(outButton2Step2);
+    // buttonsTrans[0].mouseOver(overButtonTrans0Step2);
+    // buttonsTrans[1].mouseOver(overButtonTrans1Step2);
+    // buttonsTrans[2].mouseOver(overButtonTrans2Step2);
     buttons[0].mouseClicked(clickButton0Step2);
     buttons[1].mouseClicked(clickButton1Step2);
     buttons[2].mouseClicked(clickButton2Step2);
@@ -192,165 +195,6 @@ function Step3() {
     buttons[2].mouseClicked(clickButton2Step3);
 }
 
-function Step4() {
-    removeElements();
-    noLoop();
-    createButtonsTransStep4();
-    createQuestStep4();
-    createButtonsStep4();
-    buttons[0].mouseOver(overButton0Step4);
-    buttons[0].mouseOut(outButton0Step4);
-    buttons[1].mouseOver(overButton1Step4);
-    buttons[1].mouseOut(outButton1Step4);
-    buttons[2].mouseOver(overButton2Step4);
-    buttons[2].mouseOut(outButton2Step4);
-    buttonsTrans[0].mouseOver(overButtonTrans0Step4);
-    buttonsTrans[1].mouseOver(overButtonTrans1Step4);
-    buttonsTrans[2].mouseOver(overButtonTrans2Step4);
-    buttons[0].mouseClicked(clickButton0Step4);
-    buttons[1].mouseClicked(clickButton1Step4);
-    buttons[2].mouseClicked(clickButton2Step4);
-}
-
-function Step5() {
-    removeElements();
-    noLoop();
-    createButtonsTransStep5();
-    createQuestStep5();
-    createButtonsStep5();
-    buttons[0].mouseOver(overButton0Step5);
-    buttons[0].mouseOut(outButton0Step5);
-    buttons[1].mouseOver(overButton1Step5);
-    buttons[1].mouseOut(outButton1Step5);
-    buttons[2].mouseOver(overButton2Step5);
-    buttons[2].mouseOut(outButton2Step5);
-    buttonsTrans[0].mouseOver(overButtonTrans0Step5);
-    buttonsTrans[1].mouseOver(overButtonTrans1Step5);
-    buttonsTrans[2].mouseOver(overButtonTrans2Step5);
-    buttons[0].mouseClicked(clickButton0Step5);
-    buttons[1].mouseClicked(clickButton1Step5);
-    buttons[2].mouseClicked(clickButton2Step5);
-}
-
-function Step6() {
-    removeElements();
-    noLoop();
-    createButtonsTransStep6();
-    createQuestStep6();
-    createButtonsStep6();
-    buttons[0].mouseOver(overButton0Step6);
-    buttons[0].mouseOut(outButton0Step6);
-    buttons[1].mouseOver(overButton1Step6);
-    buttons[1].mouseOut(outButton1Step6);
-    buttons[2].mouseOver(overButton2Step6);
-    buttons[2].mouseOut(outButton2Step6);
-    buttonsTrans[0].mouseOver(overButtonTrans0Step6);
-    buttonsTrans[1].mouseOver(overButtonTrans1Step6);
-    buttonsTrans[2].mouseOver(overButtonTrans2Step6);
-    buttons[0].mouseClicked(clickButton0Step6);
-    buttons[1].mouseClicked(clickButton1Step6);
-    buttons[2].mouseClicked(clickButton2Step6);
-}
-
-function Step7() {
-    removeElements();
-    noLoop();
-    createButtonsTransStep7();
-    createQuestStep7();
-    createButtonsStep7();
-    buttons[0].mouseOver(overButton0Step7);
-    buttons[0].mouseOut(outButton0Step7);
-    buttons[1].mouseOver(overButton1Step7);
-    buttons[1].mouseOut(outButton1Step7);
-    buttons[2].mouseOver(overButton2Step7);
-    buttons[2].mouseOut(outButton2Step7);
-    buttonsTrans[0].mouseOver(overButtonTrans0Step7);
-    buttonsTrans[1].mouseOver(overButtonTrans1Step7);
-    buttonsTrans[2].mouseOver(overButtonTrans2Step7);
-    buttons[0].mouseClicked(clickButton0Step7);
-    buttons[1].mouseClicked(clickButton1Step7);
-    buttons[2].mouseClicked(clickButton2Step7);
-}
-
-function Step8() {
-    removeElements();
-    noLoop();
-    createButtonsTransStep8();
-    createQuestStep8();
-    createButtonsStep8();
-    buttons[0].mouseOver(overButton0Step8);
-    buttons[0].mouseOut(outButton0Step8);
-    buttons[1].mouseOver(overButton1Step8);
-    buttons[1].mouseOut(outButton1Step8);
-    buttons[2].mouseOver(overButton2Step8);
-    buttons[2].mouseOut(outButton2Step8);
-    buttonsTrans[0].mouseOver(overButtonTrans0Step8);
-    buttonsTrans[1].mouseOver(overButtonTrans1Step8);
-    buttonsTrans[2].mouseOver(overButtonTrans2Step8);
-    buttons[0].mouseClicked(clickButton0Step8);
-    buttons[1].mouseClicked(clickButton1Step8);
-    buttons[2].mouseClicked(clickButton2Step8);
-}
-
-function Step9() {
-    removeElements();
-    noLoop();
-    createButtonsTransStep9();
-    createQuestStep9();
-    createButtonsStep9();
-    buttons[0].mouseOver(overButton0Step9);
-    buttons[0].mouseOut(outButton0Step9);
-    buttons[1].mouseOver(overButton1Step9);
-    buttons[1].mouseOut(outButton1Step9);
-    buttons[2].mouseOver(overButton2Step9);
-    buttons[2].mouseOut(outButton2Step9);
-    buttonsTrans[0].mouseOver(overButtonTrans0Step9);
-    buttonsTrans[1].mouseOver(overButtonTrans1Step9);
-    buttonsTrans[2].mouseOver(overButtonTrans2Step9);
-    buttons[0].mouseClicked(clickButton0Step9);
-    buttons[1].mouseClicked(clickButton1Step9);
-    buttons[2].mouseClicked(clickButton2Step9);
-}
-
-function Step10() {
-    removeElements();
-    noLoop();
-    createButtonsTransStep10();
-    createQuestStep10();
-    createButtonsStep10();
-    buttons[0].mouseOver(overButton0Step10);
-    buttons[0].mouseOut(outButton0Step10);
-    buttons[1].mouseOver(overButton1Step10);
-    buttons[1].mouseOut(outButton1Step10);
-    buttons[2].mouseOver(overButton2Step10);
-    buttons[2].mouseOut(outButton2Step10);
-    buttonsTrans[0].mouseOver(overButtonTrans0Step10);
-    buttonsTrans[1].mouseOver(overButtonTrans1Step10);
-    buttonsTrans[2].mouseOver(overButtonTrans2Step10);
-    buttons[0].mouseClicked(clickButton0Step10);
-    buttons[1].mouseClicked(clickButton1Step10);
-    buttons[2].mouseClicked(clickButton2Step10);
-}
-
-function Step11() {
-    removeElements();
-    noLoop();
-    createButtonsTransStep11();
-    createQuestStep11();
-    createButtonsStep11();
-    buttons[0].mouseOver(overButton0Step11);
-    buttons[0].mouseOut(outButton0Step11);
-    buttons[1].mouseOver(overButton1Step11);
-    buttons[1].mouseOut(outButton1Step11);
-    buttons[2].mouseOver(overButton2Step11);
-    buttons[2].mouseOut(outButton2Step11);
-    buttonsTrans[0].mouseOver(overButtonTrans0Step11);
-    buttonsTrans[1].mouseOver(overButtonTrans1Step11);
-    buttonsTrans[2].mouseOver(overButtonTrans2Step11);
-    buttons[0].mouseClicked(clickButton0Step11);
-    buttons[1].mouseClicked(clickButton1Step11);
-    buttons[2].mouseClicked(clickButton2Step11);
-}
 
 function Step12 () {
     removeElements();
@@ -361,7 +205,7 @@ function Step12 () {
     createQuestStep12();
     createButtonsStep12();
     buttons[0].mouseOver(overButton0Step11);
-    buttons[0].mouseClicked(clickButton0Step12);
+    setTimeout(clickButton0Step12,70000);
     buttons[1].mouseClicked(clickButton1Step12);
     buttons[2].mouseClicked(clickButton2Step12);
     step();
@@ -448,6 +292,12 @@ function Step12 () {
         // stop the loop
         noLoop();
     }
+// settimeout(test1(),30000);
+}
+
+function test1() {    
+    dataviz=2;
+
 }
 
 function Step13(){
@@ -648,22 +498,22 @@ function overButtonTrans2Step2() {
 // / micha toegevoegd voor next step on click en om antwoord op te slaan
 
 function clickButton0Step2 () {
-    sound_atlas01.play();
-    answers[0]=0;
+    // sound_atlas01.play();
+    // answers[0]=0;
     dataviz=1;
     Step12();
 }
 
 function clickButton1Step2 () {
-    sound_atlas01.play();
-    answers[0]=1;
+    // sound_atlas01.play();
+    // answers[0]=1;
     dataviz=1;
     Step12();
 }
 
 function clickButton2Step2 () {
-    sound_atlas01.play();
-    answers[0]=2;
+    // sound_atlas01.play();
+    // answers[0]=2;
     dataviz=1;
     Step12();
 }
@@ -2739,26 +2589,26 @@ function createReport () {
         story[9]=createP("Try to reveal more next time.");
     }
 
-    story[0].style("top", "350px");
-    story[0].style("left", "200px");
-    story[1].style("top", "410px");
-    story[1].style("left", "200px");
-    story[2].style("top", "470px");
-    story[2].style("left", "200px");
-    story[3].style("top", "530px");
-    story[3].style("left", "200px");
-    story[4].style("top", "590px");
-    story[4].style("left", "200px");
-    story[5].style("top", "650px");
-    story[5].style("left", "200px");
-    story[6].style("top", "710px");
-    story[6].style("left", "200px");
-    story[7].style("top", "770px");
-    story[7].style("left", "200px");
-    story[8].style("top", "830px");
-    story[8].style("left", "200px");
-    story[9].style("top", "890px");
-    story[9].style("left", "200px");
+    // story[0].style("top", "350px");
+    // story[0].style("left", "200px");
+    // story[1].style("top", "410px");
+    // story[1].style("left", "200px");
+    // story[2].style("top", "470px");
+    // story[2].style("left", "200px");
+    // story[3].style("top", "530px");
+    // story[3].style("left", "200px");
+    // story[4].style("top", "590px");
+    // story[4].style("left", "200px");
+    // story[5].style("top", "650px");
+    // story[5].style("left", "200px");
+    // story[6].style("top", "710px");
+    // story[6].style("left", "200px");
+    // story[7].style("top", "770px");
+    // story[7].style("left", "200px");
+    // story[8].style("top", "830px");
+    // story[8].style("left", "200px");
+    // story[9].style("top", "890px");
+    // story[9].style("left", "200px");
  
     for (let s of story){
     s.style("position", "absolute");
