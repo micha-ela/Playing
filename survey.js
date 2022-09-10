@@ -2042,7 +2042,7 @@ function createButtonsStep12() {
     //buttons[1].position(width * 0.8, height * 0.75);
     //buttons[2].position(width * 0.9, height * 0.35);
     // let bw=concat(",1000,px");
-    for (let button of buttons) {
+    //for (let button of buttons) {
         button.style("background-color", "#FF1493");
         button.style("min-width", "150px");
         button.style("min-height", "150px");
