@@ -2038,7 +2038,7 @@ function createButtonsStep12() {
     buttons[0] = createButton("Finalizing</br>...");
    // buttons[1] = createButton("");
    // buttons[2] = createButton("");
-    //buttons[0].position(width * 0.47, height * 0.80);
+    buttons[0].position(width * 0.47, height * 0.80);
     //buttons[1].position(width * 0.8, height * 0.75);
     //buttons[2].position(width * 0.9, height * 0.35);
     // let bw=concat(",1000,px");
