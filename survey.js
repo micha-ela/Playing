@@ -487,7 +487,7 @@ function createQuestStep1() {
 }
 
 function createButtonsStep1() {
-    buttons[0] = createButton("Play the game</br>NOW</br>and limit your future possibilities</br>FOR EVER.");
+    buttons[0] = createButton("Play the game</br>NOW</br>and alter your future possibilities</br>FOR EVER.");
     buttons[0].position(width * 0.3, height * 0.1);
 
     // let bw=concat(",1000,px");
