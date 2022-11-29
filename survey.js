@@ -361,85 +361,85 @@ function Step12 () {
     // createButtonsTransStep12();
     createQuestStep12();
     createButtonsStep12();
-    buttons[0].mouseOver(overButton0Step12);
-    setTimeout(clickButton0Step12,70000);
-    // buttons[0].mouseClicked(clickButton0Step12);
+    //buttons[0].mouseOver(overButton0Step12);
+    //setTimeout(clickButton0Step12,50000);
+    buttons[0].mouseClicked(clickButton0Step12);
     // buttons[1].mouseClicked(clickButton1Step12);
     // buttons[2].mouseClicked(clickButton2Step12);
     step();
     if (iter < 2) { 
         // Increase counter everytime
-        counter += 0.05; 
+        counter += 0.07; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
     else if (iter < 3) { 
         // Increase counter everytime
-        counter += 0.01; 
+        counter += 0.02; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
     else if (iter < 4) { 
         // Increase counter everytime
-        counter += 0.05; 
+        counter += 0.07; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
     else if (iter < 5) { 
         // Increase counter everytime
-        counter += 0.05; 
+        counter += 0.07; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
    else if (iter < 6) { 
         // Increase counter everytime
-        counter += 0.05; 
+        counter += 0.07; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
    else if (iter < 7) { 
         // Increase counter everytime
-        counter += 0.01; 
+        counter += 0.02; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
     else if (iter < 8) { 
         // Increase counter everytime
-        counter += 0.05; 
+        counter += 0.07; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
     else if (iter < 9) { 
         // Increase counter everytime
-        counter += 0.05; 
+        counter += 0.07; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
    else if (iter < 10) { 
         // Increase counter everytime
-        counter += 0.05; 
+        counter += 0.07; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
    else if (iter < 11) { 
         // Increase counter everytime
-        counter += 0.01; 
+        counter += 0.02; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
     }
-    else if (iter < 15) { 
+    else if (iter < 12) { 
         // Increase counter everytime
-        counter += 0.01; 
+        counter += 0.02; 
         // Set the iter variable to the
         // floor value of counter
         iter = floor(counter);
@@ -2054,94 +2054,7 @@ function createButtonsStep12() {
     }
 }
 
-    function createButtonsTransStep12() {
-        buttonsTrans[0] = createButton("");
-        buttonsTrans[1] = createButton("");
-        buttonsTrans[2] = createButton("");
-        buttonsTrans[0].position(width * 0, height * 0);
-        buttonsTrans[1].position(width * 0.33, height * 0);
-        buttonsTrans[2].position(width * 0.66, height * 0);
-    // let bw=concat(",1000,px");
-        for (let button of buttonsTrans) {
-        button.style("background-color", "transparent");
-        //button.style("background-color","0");
-        //button.style("background-image","none");
-        button.style("outline", "none");
-        button.style("min-width", "33.334%");
-        button.style("min-height", "100%");
-         //buttons.style("border-radius","100px");
-         //buttons.style("color","#dcdcdc");
-         //buttons.style("font-size","20px");
-         //buttons.style("font-family","coordinates");
-        button.style("border", "none");
-   }
-}
 
-
-function overButton0Step12() {
-    //sound_atlas03.play();
-    //buttons[0].style("background-color", "#7FFFD4");
-    //answer1Step12 = createP("Excellent choice.<br/ > Blandness is good for bonding.");
-    //answer1Step12.style("position", "absolute");
-    //answer1Step12.style("top", "90px");
-    //answer1Step12.style("right", "120px");
-    //quest3Step12.remove();
-}
-
-function outButton0Step12() {
-    clear();
-    buttons[0].style("background-color", "#ff8000");
-    answer1Step12.remove();
-
-
-}
-//function overButtonTrans0Step12() {
-//    background(img_beeld15);
-//}
-
-
-function overButton1Step12() {
-    //sound_atlas03.play();
-    buttons[1].style("background-color", "#7FFFD4");
-    //answer1Step12 = createP("What do you mean?<br/ > You don't like bonding?");
-    answer1Step12.style("position", "absolute");
-    answer1Step12.style("bottom", "90px");
-    answer1Step12.style("right", "60px");
-    quest3Step12.remove();
-}
-
-function outButton1Step12() {
-    clear();
-    buttons[1].style("background-color", "#ff8000");
-    answer1Step12.remove();
-
-
-}
-function overButtonTrans1Step12() {
-    background(img_beeld07);
-}
-
-
-function overButton2Step12() {
-    //sound_atlas03.play();
-    buttons[2].style("background-color", "#7FFFD4");
-    answer1Step12 = createP("Almost.<br/ > Confusion is a first step.");
-    answer1Step12.style("position", "absolute");
-    answer1Step12.style("top", "460px");
-    answer1Step12.style("right", "260px");
-    quest3Step12.remove();
-}
-
-function outButton2Step12() {
-    clear();
-    buttons[2].style("background-color", "#ff8000");
-    answer1Step12.remove();
-
-
-}
-function overButtonTrans2Step12() {
-    background(img_beeld08);
-}
 
 
 // // / micha toegevoegd voor next step on click en om antwoord op te slaan
@@ -2149,20 +2062,20 @@ function overButtonTrans2Step12() {
 function clickButton0Step12 () {
     // answers[10]=0;
     dataviz=2;
-    Step13();
+    //Step13();
 }
 
-function clickButton1Step12 () {
-    // answers[10]=1;
-    dataviz=2;
-    Step13();
-}
+// function clickButton1Step12 () {
+//     // answers[10]=1;
+//     dataviz=2;
+//     Step13();
+// }
 
-function clickButton2Step12 () {
-    // answers[10]=2;
-    dataviz=2;
-    Step13();
-}
+// function clickButton2Step12 () {
+//     // answers[10]=2;
+//     dataviz=2;
+//     Step13();
+// }
 
 ////
 
@@ -2193,6 +2106,7 @@ function createButtonsStep13() {
 // // / micha toegevoegd voor next step on click en om antwoord op te slaan
 
 function clickButton0Step13() {
+    //sound_atlas01.play();
     dataviz=0;
     Step1();
 }
@@ -2412,7 +2326,7 @@ function AveFeatCluster () {
 
 function CreateMovers1 () {   
     
-    frameRate(5);
+    frameRate(7);
     for (let mover of movers) {
     // mover.update();
     mover.show();
@@ -2421,7 +2335,7 @@ function CreateMovers1 () {
     }
 
 function MoversToCluster () {
-    frameRate(5);
+    frameRate(7);
     for (let mover of movers) {
         mover.clusterInit();
         }
@@ -2492,7 +2406,7 @@ function MoversResetFeat () {
 
 
 function CreateMovers2 () {       
-    frameRate(5);
+    frameRate(7);
     for (let mover of movers) {
         mover.update();
         mover.show();
@@ -2574,7 +2488,7 @@ function CreateMovers2 () {
 
 
     function CreateMovers3 () {       
-        frameRate(5);
+        frameRate(7);
         for (let mover of movers) {
             mover.update();
             mover.show();
